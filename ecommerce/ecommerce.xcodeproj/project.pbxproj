@@ -58,6 +58,14 @@
 		847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */; };
 		847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F6F286A4C31006E87AB /* Assets.xcassets */; };
 		847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F71286A4C31006E87AB /* LaunchScreen.storyboard */; };
+		AE0E6EB32871402B009E5BFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EA82871402B009E5BFC /* LoginViewController.swift */; };
+		AE0E6EB42871402B009E5BFC /* Untitled-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EA92871402B009E5BFC /* Untitled-2.png */; };
+		AE0E6EB52871402B009E5BFC /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */; };
+		AE0E6EB62871402B009E5BFC /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EAB2871402B009E5BFC /* login.storyboard */; };
+		AE0E6EB72871402B009E5BFC /* welcome-1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EAC2871402B009E5BFC /* welcome-1.png */; };
+		AE0E6EB82871402B009E5BFC /* ModelLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */; };
+		AE0E6EBA2871402B009E5BFC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */; };
+		AE0E6EBC2871402B009E5BFC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +122,14 @@
 		847F7F6F286A4C31006E87AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847F7F72286A4C31006E87AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847F7F74286A4C31006E87AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE0E6EA82871402B009E5BFC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AE0E6EA92871402B009E5BFC /* Untitled-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-2.png"; sourceTree = "<group>"; };
+		AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		AE0E6EAB2871402B009E5BFC /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
+		AE0E6EAC2871402B009E5BFC /* welcome-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome-1.png"; sourceTree = "<group>"; };
+		AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelLogin.swift; sourceTree = "<group>"; };
+		AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -422,6 +438,7 @@
 		847F7F62286A4C30006E87AB /* ecommerce */ = {
 			isa = PBXGroup;
 			children = (
+				AE0E6EA72871402B009E5BFC /* LoginPage */,
 				61CE6869286FE110008CD0C1 /* HomePage */,
 				610779D1286F9D490094F95A /* JSONDecoder */,
 				610779B2286F3A510094F95A /* Shared */,
@@ -440,6 +457,21 @@
 				847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */,
 			);
 			path = ecommerce;
+			sourceTree = "<group>";
+		};
+		AE0E6EA72871402B009E5BFC /* LoginPage */ = {
+			isa = PBXGroup;
+			children = (
+				AE0E6EA82871402B009E5BFC /* LoginViewController.swift */,
+				AE0E6EA92871402B009E5BFC /* Untitled-2.png */,
+				AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */,
+				AE0E6EAB2871402B009E5BFC /* login.storyboard */,
+				AE0E6EAC2871402B009E5BFC /* welcome-1.png */,
+				AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */,
+				AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */,
+				AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */,
+			);
+			path = LoginPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -500,9 +532,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0E6EB72871402B009E5BFC /* welcome-1.png in Resources */,
 				847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */,
+				AE0E6EB42871402B009E5BFC /* Untitled-2.png in Resources */,
 				847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */,
 				847F7F6B286A4C30006E87AB /* Main.storyboard in Resources */,
+				AE0E6EB62871402B009E5BFC /* login.storyboard in Resources */,
 				610779D9286FC1C50094F95A /* new-data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +559,7 @@
 				610779C6286F51C70094F95A /* About.swift in Sources */,
 				61077972286E00800094F95A /* AddRemoveItem.swift in Sources */,
 				610779C1286F47FD0094F95A /* ChooseCategoryHelper.swift in Sources */,
+				AE0E6EBA2871402B009E5BFC /* AccountViewController.swift in Sources */,
 				610779A3286E8F3D0094F95A /* ProductModel.swift in Sources */,
 				61CE686F286FE1AB008CD0C1 /* ProductDB.swift in Sources */,
 				847F7F68286A4C30006E87AB /* ViewController.swift in Sources */,
@@ -532,11 +568,14 @@
 				61CE6875286FE1F9008CD0C1 /* Design Elements.swift in Sources */,
 				61077960286D51F60094F95A /* Helpers.swift in Sources */,
 				610779D3286F9D760094F95A /* NewProduct.swift in Sources */,
+				AE0E6EB52871402B009E5BFC /* SettingsTableViewCell.swift in Sources */,
 				61077986286E461E0094F95A /* CheckoutSummary.swift in Sources */,
 				610779BC286F3EE10094F95A /* ButtonA.swift in Sources */,
 				847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */,
 				61077993286E75730094F95A /* ProductVC.swift in Sources */,
 				61077980286E38760094F95A /* CheckoutSVC.swift in Sources */,
+				AE0E6EBC2871402B009E5BFC /* RegisterViewController.swift in Sources */,
+				AE0E6EB32871402B009E5BFC /* LoginViewController.swift in Sources */,
 				61CE686B286FE189008CD0C1 /* HomePage.swift in Sources */,
 				610779C3286F48EB0094F95A /* ButtonB.swift in Sources */,
 				61077984286E3BD80094F95A /* CheckoutField.swift in Sources */,
@@ -558,6 +597,7 @@
 				61077957286D42050094F95A /* Product.swift in Sources */,
 				61077975286E055F0094F95A /* NavigationBar.swift in Sources */,
 				610779AD286EA0950094F95A /* FooterHelper.swift in Sources */,
+				AE0E6EB82871402B009E5BFC /* ModelLogin.swift in Sources */,
 				61077995286E7D8B0094F95A /* ProductSVC.swift in Sources */,
 				610779A9286E9A990094F95A /* ItemHelper.swift in Sources */,
 				6107797E286E386A0094F95A /* CheckoutVC.swift in Sources */,
@@ -710,7 +750,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ecommerce/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = login;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -737,7 +777,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ecommerce/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = login;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
