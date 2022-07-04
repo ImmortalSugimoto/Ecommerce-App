@@ -66,9 +66,14 @@
 		AE0E6EB82871402B009E5BFC /* ModelLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */; };
 		AE0E6EBA2871402B009E5BFC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */; };
 		AE0E6EBC2871402B009E5BFC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */; };
+		AE0E6EBF28718D83009E5BFC /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EBD28718D83009E5BFC /* Account+CoreDataClass.swift */; };
+		AE0E6EC028718D83009E5BFC /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EBE28718D83009E5BFC /* Account+CoreDataProperties.swift */; };
+		AE0E6EC32871E466009E5BFC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E6EC22871E466009E5BFC /* KeychainSwift */; };
+		CCE57E46B5E5998DB5FECA76 /* Pods_ecommerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE748CB2EFAD3ACBD3F2F803 /* Pods_ecommerce.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		151B36C161AFC3A91D9007FE /* Pods-ecommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ecommerce.debug.xcconfig"; path = "Target Support Files/Pods-ecommerce/Pods-ecommerce.debug.xcconfig"; sourceTree = "<group>"; };
 		61077948286D28080094F95A /* ShoppingCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartVC.swift; sourceTree = "<group>"; };
 		6107794A286D28B80094F95A /* ShoppingCartSVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartSVC.swift; sourceTree = "<group>"; };
 		61077956286D42050094F95A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 		61CE6870286FE1C1008CD0C1 /* CompanyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfo.swift; sourceTree = "<group>"; };
 		61CE6872286FE1D2008CD0C1 /* detailsUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsUI.swift; sourceTree = "<group>"; };
 		61CE6874286FE1F9008CD0C1 /* Design Elements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Design Elements.swift"; sourceTree = "<group>"; };
+		6A3DEB6CA397A833717480B5 /* Pods-ecommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ecommerce.release.xcconfig"; path = "Target Support Files/Pods-ecommerce/Pods-ecommerce.release.xcconfig"; sourceTree = "<group>"; };
 		847F7F60286A4C30006E87AB /* ecommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ecommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847F7F63286A4C30006E87AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847F7F65286A4C30006E87AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 		AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelLogin.swift; sourceTree = "<group>"; };
 		AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AE0E6EBD28718D83009E5BFC /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AE0E6EBE28718D83009E5BFC /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EE748CB2EFAD3ACBD3F2F803 /* Pods_ecommerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,12 +146,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0E6EC32871E466009E5BFC /* KeychainSwift in Frameworks */,
+				CCE57E46B5E5998DB5FECA76 /* Pods_ecommerce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CE27D751B6B3F4710C26338 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE748CB2EFAD3ACBD3F2F803 /* Pods_ecommerce.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		61077942286D266B0094F95A /* ShoppingCartPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,8 +441,12 @@
 		847F7F57286A4C2F006E87AB = {
 			isa = PBXGroup;
 			children = (
+				AE0E6EBD28718D83009E5BFC /* Account+CoreDataClass.swift */,
+				AE0E6EBE28718D83009E5BFC /* Account+CoreDataProperties.swift */,
 				847F7F62286A4C30006E87AB /* ecommerce */,
 				847F7F61286A4C30006E87AB /* Products */,
+				99600BECB1EF5B5C968E4797 /* Pods */,
+				3CE27D751B6B3F4710C26338 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -459,6 +482,15 @@
 			path = ecommerce;
 			sourceTree = "<group>";
 		};
+		99600BECB1EF5B5C968E4797 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				151B36C161AFC3A91D9007FE /* Pods-ecommerce.debug.xcconfig */,
+				6A3DEB6CA397A833717480B5 /* Pods-ecommerce.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE0E6EA72871402B009E5BFC /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -481,15 +513,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 847F7F77286A4C31006E87AB /* Build configuration list for PBXNativeTarget "ecommerce" */;
 			buildPhases = (
+				3CE7E3B91157922174E525E1 /* [CP] Check Pods Manifest.lock */,
 				847F7F5C286A4C30006E87AB /* Sources */,
 				847F7F5D286A4C30006E87AB /* Frameworks */,
 				847F7F5E286A4C30006E87AB /* Resources */,
+				B2CB2DCB7DE0A239949D290C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ecommerce;
+			packageProductDependencies = (
+				AE0E6EC22871E466009E5BFC /* KeychainSwift */,
+			);
 			productName = ecommerce;
 			productReference = 847F7F60286A4C30006E87AB /* ecommerce.app */;
 			productType = "com.apple.product-type.application";
@@ -518,6 +555,9 @@
 				Base,
 			);
 			mainGroup = 847F7F57286A4C2F006E87AB;
+			packageReferences = (
+				AE0E6EC12871E466009E5BFC /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 847F7F61286A4C30006E87AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -544,6 +584,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CE7E3B91157922174E525E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ecommerce-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2CB2DCB7DE0A239949D290C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ecommerce/Pods-ecommerce-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ecommerce/Pods-ecommerce-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ecommerce/Pods-ecommerce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		847F7F5C286A4C30006E87AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -557,6 +639,7 @@
 				610779BF286F47760094F95A /* ChooseCategory.swift in Sources */,
 				61077997286E8DA90094F95A /* ProductImage.swift in Sources */,
 				610779C6286F51C70094F95A /* About.swift in Sources */,
+				AE0E6EBF28718D83009E5BFC /* Account+CoreDataClass.swift in Sources */,
 				61077972286E00800094F95A /* AddRemoveItem.swift in Sources */,
 				610779C1286F47FD0094F95A /* ChooseCategoryHelper.swift in Sources */,
 				AE0E6EBA2871402B009E5BFC /* AccountViewController.swift in Sources */,
@@ -572,6 +655,7 @@
 				61077986286E461E0094F95A /* CheckoutSummary.swift in Sources */,
 				610779BC286F3EE10094F95A /* ButtonA.swift in Sources */,
 				847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */,
+				AE0E6EC028718D83009E5BFC /* Account+CoreDataProperties.swift in Sources */,
 				61077993286E75730094F95A /* ProductVC.swift in Sources */,
 				61077980286E38760094F95A /* CheckoutSVC.swift in Sources */,
 				AE0E6EBC2871402B009E5BFC /* RegisterViewController.swift in Sources */,
@@ -742,6 +826,7 @@
 		};
 		847F7F78286A4C31006E87AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 151B36C161AFC3A91D9007FE /* Pods-ecommerce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -769,6 +854,7 @@
 		};
 		847F7F79286A4C31006E87AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A3DEB6CA397A833717480B5 /* Pods-ecommerce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -816,6 +902,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE0E6EC12871E466009E5BFC /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE0E6EC22871E466009E5BFC /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE0E6EC12871E466009E5BFC /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */ = {

@@ -8,15 +8,16 @@
 import UIKit
 
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let thisAccount = [account]()
+    var accountDetail = [account]()
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return thisAccount.count
+        return accountDetail.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! SettingsTableViewCell
+       // cell.settingType.text = accountDetail[indexPath.row]
         return cell
     }
     

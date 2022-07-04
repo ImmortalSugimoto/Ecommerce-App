@@ -7,9 +7,15 @@
 
 import UIKit
 import CoreData
+import KeychainSwift
 class LoginViewController: UIViewController, UITextFieldDelegate {
    
+    @IBAction func accountButton(_ sender: Any) {
+    }
     
+    @IBAction func rememberSwitch(_ sender: Any) {
+        
+    }
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -22,8 +28,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func tabClick(_ sender: Any) {
+        if(userNameTextField.text != ""){
+        let startPosition: UITextPosition = userNameTextField.beginningOfDocument
         passStack.isHidden = false
-        
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,21 +41,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
         passStack.isHidden = true
             let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
-               mainStack.addGestureRecognizer(tapGesture)
+        userNameTextField.addGestureRecognizer(tapGesture)
         
              }
         @objc func handleTap(sender: UITapGestureRecognizer) {
-            if passStack.isHidden == false{
-               print("true")
-               passStack.isHidden = true}
-            else{
+           
                print("false")
                 passStack.isHidden = false
                 
-            }
+            
           }
     
-    @IBOutlet weak var mainStack: UIStackView!
+    //@IBOutlet weak var mainStack: UIStackView!
     
     @IBOutlet weak var userStack: UIStackView!
     @IBOutlet weak var passStack: UIStackView!
