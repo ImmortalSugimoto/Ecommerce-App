@@ -21,7 +21,15 @@ class RegisterViewController: UIViewController {
         passwordMatchSuccess.isHidden = true
         regButton.isHidden = true
     }
-    
+    func registerButtonAvailable(){
+        if passwordMatchSuccess.isHidden == false &&
+            availableUser.isHidden == false {
+            regButton.isHidden = false
+        }
+        else {
+            regButton.isHidden = true
+        }
+    }
     @IBOutlet weak var passwordMatch1: UILabel!
     @IBOutlet weak var availableUser: UILabel!
     @IBOutlet weak var invalidEmail: UILabel!
@@ -57,7 +65,7 @@ class RegisterViewController: UIViewController {
             passwordMatch1.isHidden = false
             passwordMatchSuccess.isHidden = true
         }
-        regButton.isHidden = false
+        registerButtonAvailable()
     }
     @IBAction func registerButton(_ sender: Any) {
         let keychain = KeychainSwift()

@@ -27,21 +27,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    @IBAction func tabClick(_ sender: Any) {
-        if(userNameTextField.text != ""){
-        let startPosition: UITextPosition = userNameTextField.beginningOfDocument
-        passStack.isHidden = false
-        }
-    }
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         passwordTextField.delegate = self
         userNameTextField.delegate = self
         
     
-        passStack.isHidden = true
-            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(sender:)))
-        userNameTextField.addGestureRecognizer(tapGesture)
+       
+      
         
              }
         @objc func handleTap(sender: UITapGestureRecognizer) {

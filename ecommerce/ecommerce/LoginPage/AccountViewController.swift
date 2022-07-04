@@ -17,7 +17,7 @@ class AccountViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SettingCell", for: indexPath) as! SettingsTableViewCell
-       // cell.settingType.text = accountDetail[indexPath.row]
+       //cell.settingType.text = accountDetail[indexPath.row]
         return cell
     }
     
