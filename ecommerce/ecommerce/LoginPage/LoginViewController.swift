@@ -33,11 +33,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         passwordTextField.delegate = self
         userNameTextField.delegate = self
-        guard let user = reg.user else {return}
+       
         if rememberMeYa.isOn {
             
-            userNameTextField.text! = reg.user
-            passwordTextField.text! = reg.password
+        
             
         }
     
@@ -70,13 +69,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     //textfield error logic
-    func doesTextExist(TextExists : Bool)->Bool{
-        if userNameTextField.text == "" &&
-            passwordTextField.text == ""{
-            return true
-        }
+   
             
-    }
+    
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
         switch textField{

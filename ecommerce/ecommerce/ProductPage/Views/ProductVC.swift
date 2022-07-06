@@ -11,7 +11,6 @@ import SwiftUI
 class ProductVC: UIViewController {
     
     @IBOutlet weak var container: UIView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
