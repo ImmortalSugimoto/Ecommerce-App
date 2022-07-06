@@ -58,6 +58,9 @@
 		847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */; };
 		847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F6F286A4C31006E87AB /* Assets.xcassets */; };
 		847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F71286A4C31006E87AB /* LaunchScreen.storyboard */; };
+		AE041A4D2874F525001FE208 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE041A4C2874F525001FE208 /* DetailsViewController.swift */; };
+		AE041A4F2874F546001FE208 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE041A4E2874F546001FE208 /* ContactViewController.swift */; };
+		AE041A512874F572001FE208 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE041A502874F572001FE208 /* ForgotPassViewController.swift */; };
 		AE0E6EB32871402B009E5BFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EA82871402B009E5BFC /* LoginViewController.swift */; };
 		AE0E6EB42871402B009E5BFC /* Untitled-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EA92871402B009E5BFC /* Untitled-2.png */; };
 		AE0E6EB52871402B009E5BFC /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */; };
@@ -130,6 +133,9 @@
 		847F7F6F286A4C31006E87AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847F7F72286A4C31006E87AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847F7F74286A4C31006E87AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE041A4C2874F525001FE208 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		AE041A4E2874F546001FE208 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		AE041A502874F572001FE208 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		AE0E6EA82871402B009E5BFC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AE0E6EA92871402B009E5BFC /* Untitled-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-2.png"; sourceTree = "<group>"; };
 		AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
@@ -503,6 +509,9 @@
 				AE0E6EA92871402B009E5BFC /* Untitled-2.png */,
 				AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */,
 				AE0E6EAB2871402B009E5BFC /* login.storyboard */,
+				AE041A502874F572001FE208 /* ForgotPassViewController.swift */,
+				AE041A4E2874F546001FE208 /* ContactViewController.swift */,
+				AE041A4C2874F525001FE208 /* DetailsViewController.swift */,
 				AE31C56428729EB600C78C14 /* NavBar.swift */,
 				AE0E6EAC2871402B009E5BFC /* welcome-1.png */,
 				AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */,
@@ -640,15 +649,18 @@
 			files = (
 				6107799B286E8DE30094F95A /* ProductFeatures.swift in Sources */,
 				61CE6871286FE1C1008CD0C1 /* CompanyInfo.swift in Sources */,
+				AE041A4F2874F546001FE208 /* ContactViewController.swift in Sources */,
 				61CE6873286FE1D2008CD0C1 /* detailsUI.swift in Sources */,
 				61077949286D28080094F95A /* ShoppingCartVC.swift in Sources */,
 				610779D5286F9E7F0094F95A /* NewModelData.swift in Sources */,
+				AE041A512874F572001FE208 /* ForgotPassViewController.swift in Sources */,
 				610779BF286F47760094F95A /* ChooseCategory.swift in Sources */,
 				61077997286E8DA90094F95A /* ProductImage.swift in Sources */,
 				610779C6286F51C70094F95A /* About.swift in Sources */,
 				AE0E6EBF28718D83009E5BFC /* Account+CoreDataClass.swift in Sources */,
 				61077972286E00800094F95A /* AddRemoveItem.swift in Sources */,
 				610779C1286F47FD0094F95A /* ChooseCategoryHelper.swift in Sources */,
+				AE041A4D2874F525001FE208 /* DetailsViewController.swift in Sources */,
 				AE0E6EBA2871402B009E5BFC /* AccountViewController.swift in Sources */,
 				610779A3286E8F3D0094F95A /* ProductModel.swift in Sources */,
 				61CE686F286FE1AB008CD0C1 /* ProductDB.swift in Sources */,

@@ -743,10 +743,10 @@
             </objects>
             <point key="canvasLocation" x="-194" y="-719"/>
         </scene>
-        <!--View Controller-->
+        <!--Details View Controller-->
         <scene sceneID="5sr-Lf-Vqn">
             <objects>
-                <viewController id="JdO-E0-tiN" sceneMemberID="viewController">
+                <viewController id="JdO-E0-tiN" customClass="DetailsViewController" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mm3-sR-qI3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1068,10 +1068,10 @@
             </objects>
             <point key="canvasLocation" x="-192.75362318840581" y="-60.267857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Contact View Controller-->
         <scene sceneID="EF9-VK-DUG">
             <objects>
-                <viewController id="Pox-QM-na3" sceneMemberID="viewController">
+                <viewController id="Pox-QM-na3" customClass="ContactViewController" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qoT-xc-1Vl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1083,10 +1083,10 @@
             </objects>
             <point key="canvasLocation" x="522" y="-68"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Pass View Controller-->
         <scene sceneID="6Jo-cF-XSW">
             <objects>
-                <viewController id="NSE-qk-Eky" sceneMemberID="viewController">
+                <viewController id="NSE-qk-Eky" customClass="ForgotPassViewController" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lb4-oX-2Ik">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
