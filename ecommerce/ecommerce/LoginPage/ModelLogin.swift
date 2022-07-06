@@ -12,6 +12,12 @@ struct reg : Codable{
     var user = "user"
     var password = "password"
 }
+struct ViewControl{
+
+}
+
+
+
 
 
 struct DataModel : Codable{
@@ -70,5 +76,31 @@ class coreDataInfo{
         
         
     }
-  
+class siteCell: UITableViewCell{
+    
+}
+class siteMapView : UIViewController, UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        storyboardViews.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let storyCell = tableView.dequeueReusableCell(withIdentifier: "SiteCell", for:indexPath) as! siteCell
+
+                switch indexPath.row{
+
+                case 0:
+                    let storyObject = UIStoryboard(name: "Main", bundle: nil)
+                    let viewLink = storyObject.instantiateViewController(withIdentifier: "siteCell") as! LoginViewController
+                    self.present(loginScreen, animated: true,completion: nil)
+                default:
+                    break
+                }
+    }
+    
+    
+    
+    var storyboardViews = [LoginViewController, RegisterViewController, DetailsViewController, LanguageViewController, ContactViewController, DetailsViewController, AccountViewController]
+    
+}
 

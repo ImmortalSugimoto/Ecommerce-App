@@ -33,7 +33,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         passwordTextField.delegate = self
         userNameTextField.delegate = self
-       
+        super.viewDidLoad()
+        guard let topString = keychain.get("user") else {return}
+        navigationItem.prompt = NSLocalizedString(topString, comment: "")
         if rememberMeYa.isOn {
             
         
@@ -91,11 +93,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             {
                 passwordIncorrect.isHidden = false
             }
-        
+      
             
         default:
             break
         }
+    }
+    func loginCheck(){
+        
     }
     
     @IBOutlet weak var loginButtonActive: UIButton!

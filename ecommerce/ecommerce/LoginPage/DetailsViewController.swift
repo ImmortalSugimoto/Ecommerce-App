@@ -6,24 +6,24 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class DetailsViewController: UIViewController {
-
+let keychain = KeychainSwift()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        guard let topString = keychain.get("user") else {return}
+        navigationItem.prompt = NSLocalizedString(topString, comment: "")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    @IBOutlet weak var titleBar: UINavigationBar!
+    
+    
+     @IBOutlet weak var titleTop: UINavigationItem!
+   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+       
     }
-    */
+    
 
 }

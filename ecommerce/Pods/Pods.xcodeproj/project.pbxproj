@@ -40,8 +40,9 @@
 		82F0E41E3D219107CA3E4731E374D22B /* Pods-ecommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ecommerce.debug.xcconfig"; sourceTree = "<group>"; };
 		93EEB5CDB456F6B4F801E19176688EAD /* Pods-ecommerce.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ecommerce.modulemap"; sourceTree = "<group>"; };
 		96BF1CDA7732E519A2DE8D22B9983645 /* Pods-ecommerce-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ecommerce-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1AFE72AECFFA10F265D22055A2F35B7 /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
+		AE73E1FB2875DE8C00E9CCC3 /* TabBarCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabBarCustom.swift; path = ../ecommerce/TabBarCustom.swift; sourceTree = "<group>"; };
 		B3EDC7F5AB062228320A8F30E874DBF5 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = Lib/KeychainAccess/Keychain.swift; sourceTree = "<group>"; };
 		C445968F24AC05F3779C4C63F393FCAF /* Pods-ecommerce-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ecommerce-frameworks.sh"; sourceTree = "<group>"; };
 		C8CC24E5342FC3BA54FD6B10029448E4 /* KeychainAccess-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KeychainAccess-dummy.m"; sourceTree = "<group>"; };
@@ -124,7 +125,6 @@
 				B3EDC7F5AB062228320A8F30E874DBF5 /* Keychain.swift */,
 				7139A0FCEFAB916F2769918041C0A2D4 /* Support Files */,
 			);
-			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -140,6 +140,7 @@
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
+				AE73E1FB2875DE8C00E9CCC3 /* TabBarCustom.swift */,
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				1822CF174BA8C3BC1C6A1BCD70C74D9E /* Pods */,

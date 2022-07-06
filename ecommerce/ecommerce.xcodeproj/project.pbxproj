@@ -74,6 +74,11 @@
 		AE0E6EC32871E466009E5BFC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E6EC22871E466009E5BFC /* KeychainSwift */; };
 		AE31C56528729EB600C78C14 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31C56428729EB600C78C14 /* NavBar.swift */; };
 		AE31C5672872A2E000C78C14 /* icon-arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = AE31C5662872A2E000C78C14 /* icon-arrow-left.png */; };
+		AE73E1FF2875DE9400E9CCC3 /* TabBarCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E1FE2875DE9400E9CCC3 /* TabBarCustom.swift */; };
+		AE73E2012875DEC500E9CCC3 /* TabCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2002875DEC500E9CCC3 /* TabCustom.swift */; };
+		AE73E2032875E00900E9CCC3 /* SiteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */; };
+		AE73E2052875E04200E9CCC3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */; };
+		AE73E2072875E05000E9CCC3 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */; };
 		CCE57E46B5E5998DB5FECA76 /* Pods_ecommerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE748CB2EFAD3ACBD3F2F803 /* Pods_ecommerce.framework */; };
 /* End PBXBuildFile section */
 
@@ -148,6 +153,11 @@
 		AE0E6EBE28718D83009E5BFC /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AE31C56428729EB600C78C14 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		AE31C5662872A2E000C78C14 /* icon-arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-left.png"; sourceTree = "<group>"; };
+		AE73E1FE2875DE9400E9CCC3 /* TabBarCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCustom.swift; sourceTree = "<group>"; };
+		AE73E2002875DEC500E9CCC3 /* TabCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabCustom.swift; path = "/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/TabCustom.swift"; sourceTree = "<absolute>"; };
+		AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMapViewController.swift; sourceTree = "<group>"; };
+		AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		EE748CB2EFAD3ACBD3F2F803 /* Pods_ecommerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -481,6 +491,7 @@
 				61077961286D57630094F95A /* CheckoutPage */,
 				61077942286D266B0094F95A /* ShoppingCartPage */,
 				847F7F63286A4C30006E87AB /* AppDelegate.swift */,
+				AE73E1FE2875DE9400E9CCC3 /* TabBarCustom.swift */,
 				847F7F65286A4C30006E87AB /* SceneDelegate.swift */,
 				847F7F67286A4C30006E87AB /* ViewController.swift */,
 				847F7F69286A4C30006E87AB /* Main.storyboard */,
@@ -505,10 +516,14 @@
 		AE0E6EA72871402B009E5BFC /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
+				AE73E2002875DEC500E9CCC3 /* TabCustom.swift */,
+				AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */,
+				AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */,
 				AE0E6EA82871402B009E5BFC /* LoginViewController.swift */,
 				AE0E6EA92871402B009E5BFC /* Untitled-2.png */,
 				AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */,
 				AE0E6EAB2871402B009E5BFC /* login.storyboard */,
+				AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */,
 				AE041A502874F572001FE208 /* ForgotPassViewController.swift */,
 				AE041A4E2874F546001FE208 /* ContactViewController.swift */,
 				AE041A4C2874F525001FE208 /* DetailsViewController.swift */,
@@ -671,8 +686,10 @@
 				61077960286D51F60094F95A /* Helpers.swift in Sources */,
 				610779D3286F9D760094F95A /* NewProduct.swift in Sources */,
 				AE0E6EB52871402B009E5BFC /* SettingsTableViewCell.swift in Sources */,
+				AE73E2012875DEC500E9CCC3 /* TabCustom.swift in Sources */,
 				61077986286E461E0094F95A /* CheckoutSummary.swift in Sources */,
 				610779BC286F3EE10094F95A /* ButtonA.swift in Sources */,
+				AE73E2032875E00900E9CCC3 /* SiteMapViewController.swift in Sources */,
 				847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */,
 				AE0E6EC028718D83009E5BFC /* Account+CoreDataProperties.swift in Sources */,
 				61077993286E75730094F95A /* ProductVC.swift in Sources */,
@@ -692,12 +709,15 @@
 				610779A5286E95090094F95A /* ProductQuantity.swift in Sources */,
 				AE31C56528729EB600C78C14 /* NavBar.swift in Sources */,
 				61CE686D286FE19F008CD0C1 /* HomeLayout.swift in Sources */,
+				AE73E2072875E05000E9CCC3 /* LanguageViewController.swift in Sources */,
 				61077959286D42F80094F95A /* ModelData.swift in Sources */,
 				6107795E286D51880094F95A /* Actions.swift in Sources */,
 				610779B1286F39DC0094F95A /* RecommendedHelper.swift in Sources */,
 				610779A7286E959E0094F95A /* QuantityHelper.swift in Sources */,
+				AE73E2052875E04200E9CCC3 /* SettingsViewController.swift in Sources */,
 				610779B8286F3C3F0094F95A /* RecommendedtemHelper.swift in Sources */,
 				847F7F66286A4C30006E87AB /* SceneDelegate.swift in Sources */,
+				AE73E1FF2875DE9400E9CCC3 /* TabBarCustom.swift in Sources */,
 				61077957286D42050094F95A /* Product.swift in Sources */,
 				61077975286E055F0094F95A /* NavigationBar.swift in Sources */,
 				610779AD286EA0950094F95A /* FooterHelper.swift in Sources */,
