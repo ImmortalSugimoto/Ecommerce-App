@@ -65,6 +65,11 @@ class RegisterViewController: UIViewController {
             passwordMatch1.isHidden = false
             passwordMatchSuccess.isHidden = true
         }
+        if(emails.text?.range(of: #".+\@.+\..+"#, options: .regularExpression) != nil){
+           invalidEmail.isHidden = true
+        }else{
+            invalidEmail.isHidden = false
+        }
         registerButtonAvailable()
     }
     @IBAction func registerButton(_ sender: Any) {

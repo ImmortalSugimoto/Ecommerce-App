@@ -316,10 +316,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="NIE-tk-w04">
-                                        <rect key="frame" x="0.0" y="513" width="404" height="159"/>
+                                        <rect key="frame" x="0.0" y="513" width="404" height="158"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Questions??" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahs-Fs-q0p">
-                                                <rect key="frame" x="0.0" y="0.0" width="404" height="50.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="50"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="11"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -327,7 +327,7 @@
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f8C-Fr-OYA">
-                                                <rect key="frame" x="0.0" y="54.5" width="404" height="50"/>
+                                                <rect key="frame" x="0.0" y="54" width="404" height="50"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQS-s6-HCo">
                                                         <rect key="frame" x="0.0" y="0.0" width="134.5" height="50"/>
@@ -365,16 +365,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HFr-qd-8JF">
-                                                <rect key="frame" x="0.0" y="108.5" width="404" height="50.5"/>
+                                                <rect key="frame" x="0.0" y="108" width="404" height="50"/>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-7" translatesAutoresizingMaskIntoConstraints="NO" id="I5g-oz-gyk">
-                                        <rect key="frame" x="0.0" y="672" width="404" height="30"/>
+                                        <rect key="frame" x="0.0" y="671" width="404" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcv-7w-2bH">
-                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="139.5" height="31"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
                                                 <menu key="menu" id="USY-GI-FMF">
@@ -392,7 +392,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtX-wC-hwE">
-                                                <rect key="frame" x="132.5" y="0.0" width="139" height="30"/>
+                                                <rect key="frame" x="132.5" y="0.0" width="139" height="31"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="13"/>
                                                 <menu key="menu" title="Site Map" id="QV9-fj-Ipx">
@@ -406,26 +406,13 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpA-ft-ol4">
-                                                <rect key="frame" x="264.5" y="0.0" width="139.5" height="30"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Ejx-vD-6KU"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="14"/>
-                                                <menu key="menu" id="zqp-lX-Ykr">
-                                                    <children>
-                                                        <command title="ENGLISH" menuElementState="on" id="Wb9-59-N71"/>
-                                                        <command title="SPANISH" menuElementState="on" id="n2i-p5-v3L"/>
-                                                        <command title="INDIAN" menuElementState="on" id="7fC-bX-BSN"/>
-                                                        <command title="DEUTSCH" menuElementState="on" id="us1-H4-5j1"/>
-                                                        <command title="PORTUGEUS" menuElementState="on" id="4fk-NT-hTk"/>
-                                                    </children>
-                                                </menu>
-                                                <state key="normal" title="Settings">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aeb-UC-oTv">
+                                                <rect key="frame" x="264.5" y="0.0" width="139.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                                                <connections>
+                                                    <action selector="settingsPhone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9r-vb-aEf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -460,9 +447,11 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <connections>
+                        <outlet property="loginButtonActive" destination="kkJ-Lg-cp4" id="v0X-x1-cTK"/>
                         <outlet property="passStack" destination="GNZ-nY-G6y" id="g7A-0H-LZK"/>
                         <outlet property="passwordIncorrect" destination="Mcf-Qe-xX8" id="T9G-te-upJ"/>
                         <outlet property="passwordTextField" destination="wzc-cd-ho9" id="WSA-5n-rCl"/>
+                        <outlet property="rememberMeYa" destination="hKV-ej-eQt" id="rGJ-bu-vnX"/>
                         <outlet property="userDNE" destination="881-9v-5fb" id="J81-nW-rIk"/>
                         <outlet property="userNameTextField" destination="8rm-o6-ON4" id="N3i-p0-K1J"/>
                     </connections>
@@ -1362,6 +1351,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="mUf-pV-OlE"/>
         <segue reference="RLM-98-lc1"/>
     </inferredMetricsTieBreakers>
     <resources>

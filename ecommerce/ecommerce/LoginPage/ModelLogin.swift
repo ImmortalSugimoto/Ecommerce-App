@@ -6,6 +6,13 @@
 //
 
 import Foundation
+import KeychainSwift
+let keychain = KeychainSwift()
+struct reg : Codable{
+    var user = "user"
+    var password = "password"
+}
+
 
 struct DataModel : Codable{
     var data : Accounts

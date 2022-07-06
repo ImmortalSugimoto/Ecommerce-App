@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 import KeychainSwift
 class LoginViewController: UIViewController, UITextFieldDelegate {
-   
+ 
     @IBAction func accountButton(_ sender: Any) {
     }
     
@@ -17,6 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBOutlet weak var rememberMeYa: UISwitch!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
     func allFieldsFilledOut() -> Bool {
@@ -32,7 +33,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         passwordTextField.delegate = self
         userNameTextField.delegate = self
-        
+        guard let user = reg.user else {return}
+        if rememberMeYa.isOn {
+            
+            userNameTextField.text! = reg.user
+            passwordTextField.text! = reg.password
+            
+        }
     
        
       
@@ -63,7 +70,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     //textfield error logic
-    
+    func doesTextExist(TextExists : Bool)->Bool{
+        if userNameTextField.text == "" &&
+            passwordTextField.text == ""{
+            return true
+        }
+            
+    }
     func textFieldDidChangeSelection(_ textField: UITextField) {
         
         switch textField{
@@ -90,6 +103,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBOutlet weak var loginButtonActive: UIButton!
     
 
     @IBAction func NewAccount(_ sender: Any) {
@@ -97,8 +111,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func enterGuest(_ sender: Any) {
     }
     @IBAction func loginButton(_ sender: Any) {
+        if userDNE.isHidden == true &&
+            passwordIncorrect.isHidden == true &&
+            passwordTextField.text != nil{
+            
+            loginButtonActive.isEnabled = true
+        }
+        else{
+            loginButtonActive.isEnabled = false
+        }
     
-        
-    
+    }
+    @IBAction func settingsPhone(_ sender: Any) {
+        if let url = URL.init(string: UIApplication.openSettingsURLString) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
