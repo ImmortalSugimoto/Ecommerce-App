@@ -23,7 +23,8 @@ class RegisterViewController: UIViewController {
     }
     func registerButtonAvailable(){
         if passwordMatchSuccess.isHidden == false &&
-            availableUser.isHidden == false {
+            availableUser.isHidden == false &&
+            invalidEmail.isHidden == true {
             regButton.isHidden = false
         }
         else {
@@ -70,8 +71,10 @@ class RegisterViewController: UIViewController {
         }else{
             invalidEmail.isHidden = false
         }
+        
         registerButtonAvailable()
     }
+    
     @IBAction func registerButton(_ sender: Any) {
         let keychain = KeychainSwift()
         let user = userTextfield.text
