@@ -29,9 +29,9 @@ struct Accounts : Codable{
 }
 struct account : Codable{
     var personalInfo : String?
-    var addresses : String?
-    var ordersPage : String?
-    var paymentTypes: String?
+    var billingAddress : String?
+    var shippingAddress : String?
+    var paymentInfo: String?
     var username : String?
     var email : String?
     }
