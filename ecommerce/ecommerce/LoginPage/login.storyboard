@@ -1270,22 +1270,22 @@
                                         <rect key="frame" x="0.0" y="443" width="374" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="wnr-pn-GVd">
-                                                <rect key="frame" x="0.0" y="0.0" width="142" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="33% off!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76M-tV-1bd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="142" height="23"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="23"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="19"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="product-zx9-speaker/image-gallery-3" translatesAutoresizingMaskIntoConstraints="NO" id="sCC-J8-fkp">
-                                                        <rect key="frame" x="0.0" y="17" width="142" height="60"/>
+                                                        <rect key="frame" x="0.0" y="17" width="118" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="ynp-gI-HWx"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Speakers on sale!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zei-Pe-pX4">
-                                                        <rect key="frame" x="0.0" y="71" width="142" height="29"/>
+                                                        <rect key="frame" x="0.0" y="71" width="118" height="29"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1293,10 +1293,10 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-zx7-speaker/image-category-page-preview" translatesAutoresizingMaskIntoConstraints="NO" id="59o-Vv-kQ8">
-                                                <rect key="frame" x="133" y="0.0" width="117.5" height="100"/>
+                                                <rect key="frame" x="109" y="0.0" width="161" height="100"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-zx9-speaker/image-gallery-1" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-6S-ZJb">
-                                                <rect key="frame" x="241.5" y="0.0" width="132.5" height="100"/>
+                                                <rect key="frame" x="261" y="0.0" width="113" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="k2N-ey-O4u"/>
                                                 </constraints>
@@ -1731,8 +1731,8 @@
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="product-xx59-headphones/image-gallery-1" width="554" height="348"/>
-        <image name="product-xx59-headphones/image-gallery-3" width="635" height="592"/>
-        <image name="product-zx7-speaker/image-category-page-preview" width="654" height="704"/>
+        <image name="product-xx59-headphones/image-gallery-3" width="654" height="736"/>
+        <image name="product-zx7-speaker/image-category-page-preview" width="1080" height="1120"/>
         <image name="product-zx9-speaker/image-gallery-1" width="654" height="348"/>
         <image name="product-zx9-speaker/image-gallery-3" width="790" height="736"/>
         <image name="shared/shopittitle" width="445" height="204"/>
