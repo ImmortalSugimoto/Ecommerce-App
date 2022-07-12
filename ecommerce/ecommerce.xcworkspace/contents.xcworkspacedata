@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataClass.swift">
+      location = "group:/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Account+CoreDataClass.swift">
    </FileRef>
    <FileRef
-      location = "group:Account+CoreDataProperties.swift">
+      location = "group:/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Account+CoreDataProperties.swift">
    </FileRef>
    <FileRef
       location = "group:/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/TabCustom.swift">

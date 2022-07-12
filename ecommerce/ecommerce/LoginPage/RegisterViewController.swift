@@ -76,18 +76,6 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func registerButton(_ sender: Any) {
-        let keychain = KeychainSwift()
-        let user = userTextfield.text
-        keychain.set(user!, forKey: "user")
-        let email = emails.text
-        keychain.set(email!, forKey: "emails")
-        let phone = phontText.text
-        keychain.set(phone!, forKey: "phone")
-        let alert = UIAlertController(title: "Sign Up success", message: "Please return to the sign in screen to continue.", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-        alert.addAction(okAction)
-        present(alert, animated: true, completion: nil)
-        return
     }
     
     @IBOutlet weak var reEnterPassText: UITextField!
