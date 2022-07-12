@@ -32,7 +32,8 @@ struct account : Codable{
     var addresses : String?
     var ordersPage : String?
     var paymentTypes: String?
-  
+    var username : String?
+    var email : String?
     }
 
 

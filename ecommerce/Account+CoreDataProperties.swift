@@ -1,8 +1,8 @@
 //
 //  Account+CoreDataProperties.swift
-//  ecommerce
+//  
 //
-//  Created by xcode on 7/3/22.
+//  Created by xcode on 7/11/22.
 //
 //
 
@@ -16,13 +16,12 @@ extension Account {
         return NSFetchRequest<Account>(entityName: "Account")
     }
 
-    @NSManaged public var personalInfo: String?
-    @NSManaged public var addresses: String?
     @NSManaged public var ordersPage: String?
     @NSManaged public var paymentTypes: String?
-
-}
-
-extension Account : Identifiable {
+    @NSManaged public var personalInfo: String?
+    @NSManaged public var username: String?
+    @NSManaged public var email: String?
+    @NSManaged public var billingAddress: String?
+    @NSManaged public var shippingAddress: String?
 
 }
