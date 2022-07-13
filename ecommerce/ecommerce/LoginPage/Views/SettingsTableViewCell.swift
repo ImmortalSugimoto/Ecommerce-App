@@ -22,3 +22,4 @@ class SettingsTableViewCell: UITableViewCell {
     }
 
 }
+    

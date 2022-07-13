@@ -38,5 +38,3 @@ struct NewRecommended: Decodable {
     var img: String
 }
 
-
-

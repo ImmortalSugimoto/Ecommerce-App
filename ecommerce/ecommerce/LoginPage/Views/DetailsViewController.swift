@@ -7,7 +7,7 @@
 
 import UIKit
 import KeychainSwift
-
+import CoreData
 class DetailsViewController: UIViewController {
 let keychain = KeychainSwift()
     override func viewDidLoad() {
@@ -15,12 +15,11 @@ let keychain = KeychainSwift()
         guard let topString = keychain.get("user") else {return}
         navigationItem.prompt = NSLocalizedString(topString, comment: "")
         
-    }
+    
     let context = (UIApplication.shared.delegate as?
                    AppDelegate)?.persistentContainer.viewContext
   
-    // Create a new UserEntity in the
-    // NSManagedObjectContext context
+    
     let account = Account()
     func saveData(){
     account.username = "User Name"
@@ -39,12 +38,28 @@ let keychain = KeychainSwift()
         // Handle Error
     }
     }
-    @IBOutlet weak var shippingAddress: UITextField!
+        
+    }
+    @IBOutlet weak var shippingAd: UITextField!
     @IBOutlet weak var shippingCity: UITextField!
     @IBOutlet weak var shippingState: UITextField!
     @IBOutlet weak var shippingZip: UITextField!
-    
+    var accounts = [account]()
     @IBAction func shipSave(_ sender: Any) {
+        let context = (UIApplication.shared.delegate as?
+                       AppDelegate)?.persistentContainer.viewContext
+        let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
+       let shippingAddress = "\(shippingAd.text), \(shippingCity.text), \(shippingState.text), \(shippingZip)"
+        account.shippingAddress = shippingAddress
+        do{
+            try context?.save()
+            print("\(shippingAddress)")
+        }
+            catch{
+                print("data not saved")
+            }
+    
+        
     }
     @IBOutlet weak var billingAddress: UITextField!
     @IBOutlet weak var billingCity: UITextField!

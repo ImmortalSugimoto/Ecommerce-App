@@ -16,17 +16,6 @@ struct ViewControl{
 
 }
 
-
-
-
-
-struct DataModel : Codable{
-    var data : Accounts
-}
-struct Accounts : Codable{
-    var accountDetails  : [account]
-  
-}
 struct account : Codable{
     var personalInfo : String
     var billingAddress : String
@@ -38,21 +27,22 @@ struct account : Codable{
     }
 
 
-/*import CoreData
+
+import CoreData
 import UIKit
 public class coreDataInfo{
    
-    
-    let context = (UIApplication.shared.delegate as?
-                   AppDelegate)?.persistentContainer.viewContext
-    func addName(personalInfo : String, ordersPage : String, paymentTypes : String, shippingAddress : String, billingAddress : String, paymentInfo : String, userName : String){
-    let account = NSEntityDescription.insertNewObject(forEntityName: "account", into: context!) as! Account
-    account.personalInfo = personalInfo
-    account.ordersPage = ordersPage
-    account.paymentTypes = paymentTypes
-    account.shippingAddress = shippingAddress
-    account.billingAddress = billingAddress
-    account.username = userName
+   
+    func addName(personalInfo : NSString, ordersPage : NSString, paymentTypes : NSString, shippingAddress : NSString, billingAddress : NSString, paymentInfo : NSString, userName : NSString){
+        let context = (UIApplication.shared.delegate as?
+                       AppDelegate)?.persistentContainer.viewContext
+    let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
+        account.personalInfo = personalInfo as? String
+        account.ordersPage = ordersPage as? String
+        account.paymentTypes = paymentTypes as? String
+       account.billingAddress = billingAddress as? String
+        account.username = userName as? String
+        account.shippingAddress = shippingAddress as? String
     do{
         try context?.save()
         print("data saved")
@@ -62,8 +52,8 @@ public class coreDataInfo{
         }
     }
 }
-    
-   */
+
+   
     
 
 

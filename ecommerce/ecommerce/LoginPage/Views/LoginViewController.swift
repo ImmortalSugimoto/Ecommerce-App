@@ -116,8 +116,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             passwordTextField.text != nil{
             
             loginButtonActive.isEnabled = true
-            DetailsViewController.
-            
+       
         }
         else{
             loginButtonActive.isEnabled = false

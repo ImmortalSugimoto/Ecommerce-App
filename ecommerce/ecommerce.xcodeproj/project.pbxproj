@@ -62,7 +62,6 @@
 		AE041A4F2874F546001FE208 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE041A4E2874F546001FE208 /* ContactViewController.swift */; };
 		AE041A512874F572001FE208 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE041A502874F572001FE208 /* ForgotPassViewController.swift */; };
 		AE0E6EB32871402B009E5BFC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EA82871402B009E5BFC /* LoginViewController.swift */; };
-		AE0E6EB42871402B009E5BFC /* Untitled-2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EA92871402B009E5BFC /* Untitled-2.png */; };
 		AE0E6EB52871402B009E5BFC /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */; };
 		AE0E6EB62871402B009E5BFC /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EAB2871402B009E5BFC /* login.storyboard */; };
 		AE0E6EB72871402B009E5BFC /* welcome-1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EAC2871402B009E5BFC /* welcome-1.png */; };
@@ -73,7 +72,6 @@
 		AE31C56528729EB600C78C14 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31C56428729EB600C78C14 /* NavBar.swift */; };
 		AE31C5672872A2E000C78C14 /* icon-arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = AE31C5662872A2E000C78C14 /* icon-arrow-left.png */; };
 		AE73E1FF2875DE9400E9CCC3 /* TabBarCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E1FE2875DE9400E9CCC3 /* TabBarCustom.swift */; };
-		AE73E2012875DEC500E9CCC3 /* TabCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2002875DEC500E9CCC3 /* TabCustom.swift */; };
 		AE73E2032875E00900E9CCC3 /* SiteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */; };
 		AE73E2052875E04200E9CCC3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */; };
 		AE73E2072875E05000E9CCC3 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */; };
@@ -142,7 +140,6 @@
 		AE041A4E2874F546001FE208 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		AE041A502874F572001FE208 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 		AE0E6EA82871402B009E5BFC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		AE0E6EA92871402B009E5BFC /* Untitled-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Untitled-2.png"; sourceTree = "<group>"; };
 		AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		AE0E6EAB2871402B009E5BFC /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		AE0E6EAC2871402B009E5BFC /* welcome-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome-1.png"; sourceTree = "<group>"; };
@@ -152,7 +149,6 @@
 		AE31C56428729EB600C78C14 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		AE31C5662872A2E000C78C14 /* icon-arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-left.png"; sourceTree = "<group>"; };
 		AE73E1FE2875DE9400E9CCC3 /* TabBarCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCustom.swift; sourceTree = "<group>"; };
-		AE73E2002875DEC500E9CCC3 /* TabCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabCustom.swift; path = "/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/TabCustom.swift"; sourceTree = "<absolute>"; };
 		AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMapViewController.swift; sourceTree = "<group>"; };
 		AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
@@ -448,6 +444,7 @@
 		61CE6869286FE110008CD0C1 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				6107798C286E75090094F95A /* ProductPage */,
 				61CE686A286FE189008CD0C1 /* HomePage.swift */,
 				61CE686C286FE19F008CD0C1 /* HomeLayout.swift */,
 				61CE686E286FE1AB008CD0C1 /* ProductDB.swift */,
@@ -485,7 +482,6 @@
 				610779B2286F3A510094F95A /* Shared */,
 				61077973286E054A0094F95A /* CustomUI */,
 				6107795A286D43300094F95A /* Resources */,
-				6107798C286E75090094F95A /* ProductPage */,
 				61077961286D57630094F95A /* CheckoutPage */,
 				61077942286D266B0094F95A /* ShoppingCartPage */,
 				847F7F63286A4C30006E87AB /* AppDelegate.swift */,
@@ -514,26 +510,40 @@
 		AE0E6EA72871402B009E5BFC /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
-				AE784C39287D8CC600672F3B /* Account+CoreDataClass.swift */,
-				AE784C37287D8CC400672F3B /* Account+CoreDataProperties.swift */,
-				AE73E2002875DEC500E9CCC3 /* TabCustom.swift */,
-				AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */,
-				AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */,
-				AE0E6EA82871402B009E5BFC /* LoginViewController.swift */,
-				AE0E6EA92871402B009E5BFC /* Untitled-2.png */,
-				AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */,
+				AE784C3D287E7BA500672F3B /* Views */,
+				AE784C3B287E7B8000672F3B /* Models */,
 				AE0E6EAB2871402B009E5BFC /* login.storyboard */,
-				AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */,
-				AE041A502874F572001FE208 /* ForgotPassViewController.swift */,
-				AE041A4E2874F546001FE208 /* ContactViewController.swift */,
-				AE041A4C2874F525001FE208 /* DetailsViewController.swift */,
 				AE31C56428729EB600C78C14 /* NavBar.swift */,
 				AE0E6EAC2871402B009E5BFC /* welcome-1.png */,
-				AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */,
-				AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */,
-				AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */,
 			);
 			path = LoginPage;
+			sourceTree = "<group>";
+		};
+		AE784C3B287E7B8000672F3B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE784C37287D8CC400672F3B /* Account+CoreDataProperties.swift */,
+				AE784C39287D8CC600672F3B /* Account+CoreDataClass.swift */,
+				AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE784C3D287E7BA500672F3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */,
+				AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */,
+				AE041A4E2874F546001FE208 /* ContactViewController.swift */,
+				AE041A4C2874F525001FE208 /* DetailsViewController.swift */,
+				AE041A502874F572001FE208 /* ForgotPassViewController.swift */,
+				AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */,
+				AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */,
+				AE0E6EA82871402B009E5BFC /* LoginViewController.swift */,
+				AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */,
+				AE0E6EAA2871402B009E5BFC /* SettingsTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -604,7 +614,6 @@
 			files = (
 				AE0E6EB72871402B009E5BFC /* welcome-1.png in Resources */,
 				847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */,
-				AE0E6EB42871402B009E5BFC /* Untitled-2.png in Resources */,
 				847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */,
 				847F7F6B286A4C30006E87AB /* Main.storyboard in Resources */,
 				AE0E6EB62871402B009E5BFC /* login.storyboard in Resources */,
@@ -687,7 +696,6 @@
 				610779D3286F9D760094F95A /* NewProduct.swift in Sources */,
 				AE784C38287D8CC400672F3B /* Account+CoreDataProperties.swift in Sources */,
 				AE0E6EB52871402B009E5BFC /* SettingsTableViewCell.swift in Sources */,
-				AE73E2012875DEC500E9CCC3 /* TabCustom.swift in Sources */,
 				61077986286E461E0094F95A /* CheckoutSummary.swift in Sources */,
 				610779BC286F3EE10094F95A /* ButtonA.swift in Sources */,
 				AE73E2032875E00900E9CCC3 /* SiteMapViewController.swift in Sources */,
