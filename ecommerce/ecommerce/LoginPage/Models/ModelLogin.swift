@@ -16,7 +16,7 @@ struct ViewControl{
 
 }
 
-struct account : Codable{
+/*struct account : Codable{
     var personalInfo : String
     var billingAddress : String
     var shippingAddress : String
@@ -26,7 +26,7 @@ struct account : Codable{
     var email : String
     }
 
-
+*/
 
 import CoreData
 import UIKit
@@ -36,13 +36,13 @@ public class coreDataInfo{
     func addName(personalInfo : NSString, ordersPage : NSString, paymentTypes : NSString, shippingAddress : NSString, billingAddress : NSString, paymentInfo : NSString, userName : NSString){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
-    let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
-        account.personalInfo = personalInfo as? String
-        account.ordersPage = ordersPage as? String
-        account.paymentTypes = paymentTypes as? String
-       account.billingAddress = billingAddress as? String
-        account.username = userName as? String
-        account.shippingAddress = shippingAddress as? String
+    let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as? Account
+        account!.personalInfo = personalInfo as? String
+        account!.ordersPage = ordersPage as? String
+        account!.paymentTypes = paymentTypes as? String
+        account?.billingAddress = billingAddress as? String
+        account?.username = userName as? String
+        account!.shippingAddress = shippingAddress as? String
     do{
         try context?.save()
         print("data saved")

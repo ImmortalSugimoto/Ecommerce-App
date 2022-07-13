@@ -23,5 +23,6 @@ extension Account {
     @NSManaged public var personalInfo: String?
     @NSManaged public var shippingAddress: String?
     @NSManaged public var username: String?
+    @NSManaged public var paymentInfo: String?
 
 }

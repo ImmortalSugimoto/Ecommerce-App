@@ -955,7 +955,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                         <connections>
-                                            <action selector="billSave:" destination="JdO-E0-tiN" eventType="touchUpInside" id="Wwp-f6-MfR"/>
+                                            <action selector="billingButton:" destination="JdO-E0-tiN" eventType="touchUpInside" id="aUR-Wx-d88"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="8fT-43-p2w" userLabel="creditcard">
@@ -1033,6 +1033,7 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                                 <connections>
                                                     <action selector="ccSave:" destination="JdO-E0-tiN" eventType="touchUpInside" id="EPO-UW-V08"/>
+                                                    <action selector="storage:" destination="JdO-E0-tiN" eventType="touchUpInside" id="u8v-EB-deD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXt-Kp-ucd">
@@ -1041,6 +1042,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Save and Continue">
                                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="hbg-Iz-Zlf" kind="show" id="iy5-tc-tWV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YU-yw-hYj">
                                                 <rect key="frame" x="0.0" y="90" width="394" height="31"/>
@@ -1686,6 +1690,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="iy5-tc-tWV"/>
         <segue reference="RLM-98-lc1"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -4,12 +4,13 @@
         <attribute name="billingAddress" optional="YES" attributeType="String"/>
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="ordersPage" optional="YES" attributeType="String"/>
+        <attribute name="paymentInfo" optional="YES" attributeType="String"/>
         <attribute name="paymentTypes" optional="YES" attributeType="String"/>
         <attribute name="personalInfo" optional="YES" attributeType="String"/>
         <attribute name="shippingAddress" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="Account" positionX="-63" positionY="-18" width="128" height="149"/>
     </elements>
 </model>

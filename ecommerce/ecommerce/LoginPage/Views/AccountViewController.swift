@@ -8,11 +8,11 @@
 import UIKit
 
 class AccountViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var accountDetail = [account]()
+   
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return accountDetail.count
+        return 6
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -49,6 +49,7 @@ class RegisterViewController: UIViewController {
         if user == keychain.get("user"){
             userTaken.isHidden = false
             availableUser.isHidden = true
+            
         }else
         {
             availableUser.isHidden = false
