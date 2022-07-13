@@ -27,22 +27,41 @@ struct ViewControl{
     }
 
 */
-
+public var core = coreDataInfo()
 import CoreData
 import UIKit
 public class coreDataInfo{
    
    
-    func addName(personalInfo : NSString, ordersPage : NSString, paymentTypes : NSString, shippingAddress : NSString, billingAddress : NSString, paymentInfo : NSString, userName : NSString){
+    public func fetchIt(username : NSString, emails : NSString){
+        let context = (UIApplication.shared.delegate as?
+                       AppDelegate)?.persistentContainer.viewContext
+          let request = Account.fetchRequest() as NSFetchRequest<Account>
+          var account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
+        account.username = username as String
+        account.email = emails as String
+        print("\(username)")
+    }
+    
+    public func addAcc(shippingAddress : NSString, billingAddress : NSString, paymentInfo : NSString){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
     let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as? Account
-        account!.personalInfo = personalInfo as? String
-        account!.ordersPage = ordersPage as? String
-        account!.paymentTypes = paymentTypes as? String
-        account?.billingAddress = billingAddress as? String
-        account?.username = userName as? String
-        account!.shippingAddress = shippingAddress as? String
+     
+        do{
+            try context?.save()
+            print("data saved")
+        }
+            catch{
+                print("data not saved")
+            }
+        }
+    
+   public func addReg(username : NSString!, email : NSString!){
+        let context = (UIApplication.shared.delegate as?
+                       AppDelegate)?.persistentContainer.viewContext
+    let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as? Account
+      
     do{
         try context?.save()
         print("data saved")

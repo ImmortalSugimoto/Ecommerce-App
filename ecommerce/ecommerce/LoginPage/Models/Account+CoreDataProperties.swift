@@ -2,7 +2,7 @@
 //  Account+CoreDataProperties.swift
 //  
 //
-//  Created by xcode on 7/12/22.
+//  Created by xcode on 7/13/22.
 //
 //
 
@@ -18,9 +18,7 @@ extension Account {
 
     @NSManaged public var billingAddress: String?
     @NSManaged public var email: String?
-    @NSManaged public var ordersPage: String?
     @NSManaged public var paymentTypes: String?
-    @NSManaged public var personalInfo: String?
     @NSManaged public var shippingAddress: String?
     @NSManaged public var username: String?
     @NSManaged public var paymentInfo: String?

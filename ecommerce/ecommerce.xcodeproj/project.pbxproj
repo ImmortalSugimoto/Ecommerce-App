@@ -75,8 +75,8 @@
 		AE73E2032875E00900E9CCC3 /* SiteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */; };
 		AE73E2052875E04200E9CCC3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */; };
 		AE73E2072875E05000E9CCC3 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */; };
-		AE784C3F287E8E6900672F3B /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE784C3E287E8E6900672F3B /* Account+CoreDataClass.swift */; };
-		AE784C41287E8E6D00672F3B /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE784C40287E8E6D00672F3B /* Account+CoreDataProperties.swift */; };
+		AE784C47287F0FE700672F3B /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE784C46287F0FE700672F3B /* Account+CoreDataProperties.swift */; };
+		AE784C49287F0FEB00672F3B /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE784C48287F0FEB00672F3B /* Account+CoreDataClass.swift */; };
 		CCE57E46B5E5998DB5FECA76 /* Pods_ecommerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE748CB2EFAD3ACBD3F2F803 /* Pods_ecommerce.framework */; };
 /* End PBXBuildFile section */
 
@@ -152,8 +152,8 @@
 		AE73E2022875E00900E9CCC3 /* SiteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteMapViewController.swift; sourceTree = "<group>"; };
 		AE73E2042875E04200E9CCC3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		AE73E2062875E05000E9CCC3 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
-		AE784C3E287E8E6900672F3B /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Account+CoreDataClass.swift"; path = "/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		AE784C40287E8E6D00672F3B /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Account+CoreDataProperties.swift"; path = "/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		AE784C46287F0FE700672F3B /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Account+CoreDataProperties.swift"; path = "/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		AE784C48287F0FEB00672F3B /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Account+CoreDataClass.swift"; path = "/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		EE748CB2EFAD3ACBD3F2F803 /* Pods_ecommerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -522,8 +522,8 @@
 		AE784C3B287E7B8000672F3B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AE784C40287E8E6D00672F3B /* Account+CoreDataProperties.swift */,
-				AE784C3E287E8E6900672F3B /* Account+CoreDataClass.swift */,
+				AE784C48287F0FEB00672F3B /* Account+CoreDataClass.swift */,
+				AE784C46287F0FE700672F3B /* Account+CoreDataProperties.swift */,
 				AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */,
 			);
 			path = Models;
@@ -676,7 +676,6 @@
 				AE041A4F2874F546001FE208 /* ContactViewController.swift in Sources */,
 				61CE6873286FE1D2008CD0C1 /* detailsUI.swift in Sources */,
 				61077949286D28080094F95A /* ShoppingCartVC.swift in Sources */,
-				AE784C3F287E8E6900672F3B /* Account+CoreDataClass.swift in Sources */,
 				610779D5286F9E7F0094F95A /* NewModelData.swift in Sources */,
 				AE041A512874F572001FE208 /* ForgotPassViewController.swift in Sources */,
 				610779BF286F47760094F95A /* ChooseCategory.swift in Sources */,
@@ -693,7 +692,6 @@
 				61077982286E398F0094F95A /* CheckoutForm.swift in Sources */,
 				61CE6875286FE1F9008CD0C1 /* Design Elements.swift in Sources */,
 				61077960286D51F60094F95A /* Helpers.swift in Sources */,
-				AE784C41287E8E6D00672F3B /* Account+CoreDataProperties.swift in Sources */,
 				610779D3286F9D760094F95A /* NewProduct.swift in Sources */,
 				AE0E6EB52871402B009E5BFC /* SettingsTableViewCell.swift in Sources */,
 				61077986286E461E0094F95A /* CheckoutSummary.swift in Sources */,
@@ -705,6 +703,8 @@
 				AE0E6EBC2871402B009E5BFC /* RegisterViewController.swift in Sources */,
 				AE0E6EB32871402B009E5BFC /* LoginViewController.swift in Sources */,
 				61CE686B286FE189008CD0C1 /* HomePage.swift in Sources */,
+				AE784C47287F0FE700672F3B /* Account+CoreDataProperties.swift in Sources */,
+				AE784C49287F0FEB00672F3B /* Account+CoreDataClass.swift in Sources */,
 				610779C3286F48EB0094F95A /* ButtonB.swift in Sources */,
 				61077984286E3BD80094F95A /* CheckoutField.swift in Sources */,
 				61077988286E49090094F95A /* CheckoutDetails.swift in Sources */,
