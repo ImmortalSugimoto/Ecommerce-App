@@ -16,7 +16,7 @@
 		102764E75956A8848BC9691383C3E031 /* KeychainAccess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.debug.xcconfig; sourceTree = "<group>"; };
 		241D78B31A172C75E52D0898852DF5FB /* KeychainAccess-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-prefix.pch"; sourceTree = "<group>"; };
 		30D37559E6901C67F3A387E723C84D1A /* Pods-ecommerce-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ecommerce-umbrella.h"; sourceTree = "<group>"; };
-		387A9D7E004DAED690548C5D3655F7EA /* Pods-ecommerce */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ecommerce"; path = Pods_ecommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		387A9D7E004DAED690548C5D3655F7EA /* Pods_ecommerce.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ecommerce.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE1AF9343B2A3267E3D0066A2424D3C /* Pods-ecommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ecommerce.release.xcconfig"; sourceTree = "<group>"; };
 		3EDC038999F6605A205B30520A924753 /* Pods-ecommerce-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ecommerce-acknowledgements.plist"; sourceTree = "<group>"; };
 		52FC61B13B083D16D1B00680D532E47D /* Pods-ecommerce-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ecommerce-dummy.m"; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		AD65598605A5FF1F1E75E3BFCF78076C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				387A9D7E004DAED690548C5D3655F7EA /* Pods-ecommerce */,
+				387A9D7E004DAED690548C5D3655F7EA /* Pods_ecommerce.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 			);
 			name = "Pods-ecommerce";
 			productName = Pods_ecommerce;
-			productReference = 387A9D7E004DAED690548C5D3655F7EA /* Pods-ecommerce */;
+			productReference = 387A9D7E004DAED690548C5D3655F7EA /* Pods_ecommerce.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
