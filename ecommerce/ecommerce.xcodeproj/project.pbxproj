@@ -154,6 +154,7 @@
 		847F7F6E286A4C30006E87AB /* ecommerce.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 847F7F6C286A4C30006E87AB /* ecommerce.xcdatamodeld */; };
 		847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F6F286A4C31006E87AB /* Assets.xcassets */; };
 		847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F7F71286A4C31006E87AB /* LaunchScreen.storyboard */; };
+		AE6C40E728806CA0007C5A26 /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE6C40E628806CA0007C5A26 /* login.storyboard */; };
 		F7D42BA22875236600C554CC /* CatalogMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BA12875236600C554CC /* CatalogMain.swift */; };
 		F7D42BA6287524C300C554CC /* CategoryViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BA5287524C300C554CC /* CategoryViewCells.swift */; };
 		F7D42BA828752F7800C554CC /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D42BA728752F7800C554CC /* GameViewController.swift */; };
@@ -314,6 +315,7 @@
 		847F7F6F286A4C31006E87AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847F7F72286A4C31006E87AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847F7F74286A4C31006E87AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE6C40E628806CA0007C5A26 /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = login.storyboard; path = "../../../../../Downloads/Ecommerce-App-high-2/ecommerce/login.storyboard"; sourceTree = "<group>"; };
 		F7D42BA12875236600C554CC /* CatalogMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogMain.swift; sourceTree = "<group>"; };
 		F7D42BA5287524C300C554CC /* CategoryViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewCells.swift; sourceTree = "<group>"; };
 		F7D42BA728752F7800C554CC /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -818,6 +820,7 @@
 		61E2ACA42871568700CD4F8F /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
+				AE6C40E628806CA0007C5A26 /* login.storyboard */,
 				61E2ACA8287156A900CD4F8F /* AccountViewController.swift */,
 				61E2ACA7287156A900CD4F8F /* login.storyboard */,
 				61E2ACA6287156A900CD4F8F /* LoginViewController.swift */,
@@ -1404,6 +1407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE6C40E728806CA0007C5A26 /* login.storyboard in Resources */,
 				847F7F73286A4C31006E87AB /* LaunchScreen.storyboard in Resources */,
 				847F7F70286A4C31006E87AB /* Assets.xcassets in Resources */,
 				61E2ACB4287156A900CD4F8F /* welcome-1.png in Resources */,
