@@ -8,18 +8,16 @@
 import UIKit
 import KeychainSwift
 import CoreData
-class DetailsViewController: UIViewController {
-let keychain = KeychainSwift()
+class DetailsViewController: UIViewController, UITextFieldDelegate {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let topString = keychain.get("user") else {return}
         navigationItem.prompt = NSLocalizedString(topString, comment: "")
+        emailText.delegate = self
+        
     }
-  
-    
-    
-
-    // To save the new entity to the persistent store, call
+  // To save the new entity to the persistent store, call
     // save on the context
 
     @IBOutlet weak var shippingAd: UITextField!
@@ -27,35 +25,8 @@ let keychain = KeychainSwift()
     @IBOutlet weak var shippingState: UITextField!
     @IBOutlet weak var shippingZip: UITextField!
    
-    @IBAction func shipSave(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as?
-                       AppDelegate)?.persistentContainer.viewContext
-        let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
-        let shippingAddress = "\(shippingAd.text!), \(shippingCity.text!), \(shippingState.text!), \(shippingZip.text!)"
-        account.shippingAddress = shippingAddress
-        do{
-            try context?.save()
-            print("\(shippingAddress)")
-        }
-            catch{
-                print("data not saved")
-            }
-    }
+ 
     
-    @IBAction func billingButton(_ sender: Any) {
-        let context = (UIApplication.shared.delegate as?
-                       AppDelegate)?.persistentContainer.viewContext
-        let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
-        let billingAddress = "\(billingAddress.text!), \(billingCity.text!), \(billingState.text!), \(billingZip.text!)"
-        account.billingAddress = billingAddress
-        do{
-            try context?.save()
-            print("\(billingAddress)")
-        }
-            catch{
-                print("data not saved")
-            }
-    }
     @IBAction func storage(_ sender: Any) {
     }
     @IBOutlet weak var billingAddress: UITextField!
@@ -69,15 +40,32 @@ let keychain = KeychainSwift()
     @IBOutlet weak var ccCVV: UITextField!
     @IBOutlet weak var ccZip: UITextField!
     
+    @IBOutlet weak var emailText: UITextField!
     @IBAction func ccSave(_ sender: Any) {
-       let context = (UIApplication.shared.delegate as?
-                           AppDelegate)?.persistentContainer.viewContext
-        let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as? Account
-            let paymentInfo = "\(ccNumber.text!), \(ccExp.text!), \(ccCVV.text!), \(ccZip.text!)"
-        account!.paymentInfo = paymentInfo
+        core.addAcc(shippingAddress: account.shippingAddress as! NSString, billingAddress: account.billingAddress! as NSString, paymentInfo: account.paymentInfo! as NSString, email: account.email! as NSString)
+      
+        let email = emailText.text
+        account.email! = email!
+        
+        let shippingAddress = "\(shippingAd.text!), \(shippingCity.text!), \(shippingState.text!), \(shippingZip.text!)"
+            account.shippingAddress = shippingAddress
+        
+        let billingAddress = "\(billingAddress.text!), \(billingCity.text!), \(billingState.text!), \(billingZip.text!)"
+            account.billingAddress = billingAddress
+        
+        let paymentInfo = "\(ccNumber.text!), \(ccExp.text!), \(ccCVV.text!), \(ccZip.text!)"
+            account.paymentInfo = paymentInfo
+       /*account.setValue(billingAddress, forKey: "billingAddress")
+        account.setValue(shippingAddress, forKey: "shippingAddress")
+        account.setValue(paymentInfo, forKey: "paymentInfo")
+        account.setValue(email, forKey: "email")*/
+
             do{
                 try context?.save()
-                print("\(paymentInfo)")
+                print(account.paymentInfo)
+                print(account.shippingAddress)
+                print(account.billingAddress)
+                print(account.paymentInfo)
             }
                 catch{
                     print("data not saved")

@@ -31,23 +31,28 @@ public var core = coreDataInfo()
 import CoreData
 import UIKit
 public class coreDataInfo{
-   
-   
-    public func fetchIt(username : NSString, emails : NSString){
+
+    public func fetchAcc(shippingAddress : NSString, billingAddress : NSString, paymentInfo : NSString){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
           let request = Account.fetchRequest() as NSFetchRequest<Account>
-          var account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
-        account.username = username as String
-        account.email = emails as String
-        print("\(username)")
+          let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
+        
+    }
+    public func fetchIt(username : NSString, email : NSString){
+        let context = (UIApplication.shared.delegate as?
+                       AppDelegate)?.persistentContainer.viewContext
+          let request = Account.fetchRequest() as NSFetchRequest<Account>
+          let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
+       
+      
     }
     
-    public func addAcc(shippingAddress : NSString, billingAddress : NSString, paymentInfo : NSString){
+    public func addAcc(shippingAddress : NSString, billingAddress : NSString, paymentInfo : NSString, email : NSString?){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
     let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as? Account
-     
+                     
         do{
             try context?.save()
             print("data saved")
@@ -71,27 +76,11 @@ public class coreDataInfo{
         }
     }
 }
+let context = (UIApplication.shared.delegate as?
+               AppDelegate)?.persistentContainer.viewContext
+var account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
+var accountList = [account.username, account.email , account.shippingAddress, account.billingAddress, account.paymentInfo]
 
-   
-    
-
-
-    struct Usernamze: Codable{
-       var usernamze : [Usernamze]?
-        
-    }
-    struct usernamze : Codable{
-        var username : String?
-        var password : String?
-        var reEnterPass : String?
-        var phoneNumber : String?
-        var otp : Int?
-        var email : String?
-        
-        
-    }
-
-    
     /*var storyboardViews = [LoginViewController, RegisterViewController, DetailsViewController, LanguageViewController, ContactViewController, DetailsViewController, AccountViewController]
     */
 

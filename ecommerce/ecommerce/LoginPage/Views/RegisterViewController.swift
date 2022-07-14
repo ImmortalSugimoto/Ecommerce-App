@@ -9,7 +9,7 @@ import UIKit
 import KeychainSwift
 import CoreData
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: UIViewController, UNUserNotificationCenterDelegate, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,12 @@ class RegisterViewController: UIViewController {
         availableUser.isHidden = true
         passwordMatchSuccess.isHidden = true
         regButton.isHidden = true
+        UNUserNotificationCenter.current().delegate = self
+        userTextfield.delegate = self
+        emails.delegate = self
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.banner])
     }
     func registerButtonAvailable(){
         if passwordMatchSuccess.isHidden == false &&
@@ -45,11 +51,11 @@ class RegisterViewController: UIViewController {
                        AppDelegate)?.persistentContainer.viewContext
         let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
         let keychain = KeychainSwift()
-        let username = userTextfield.text
+       
         let password = pwTextField.text
         let passwordCheck = reEnterPassText.text
        
-        if username == account.username{
+        if userTextfield.text == ""{
             userTaken.isHidden = false
             availableUser.isHidden = true
             
@@ -59,6 +65,12 @@ class RegisterViewController: UIViewController {
             userTaken.isHidden = true
             
         }
+        core.addReg(username: account.username as? NSString, email: account.email as? NSString)
+        account.setValue(emails.text, forKey: "email") 
+        account.setValue(userTextfield.text, forKey: "username")
+     
+       
+        
         if password == passwordCheck {
             keychain.set(password!, forKey: "password")
             passwordMatch1.isHidden = true
@@ -81,26 +93,26 @@ class RegisterViewController: UIViewController {
             //random 4 digit number to send as OTP
             let randomInt = Int.random(in: 1000..<9999)
             UNUserNotificationCenter.current().getNotificationSettings{ notify in
-                switch notify.authorizationStatus{
-                case .notDetermined:
+                if notify.authorizationStatus
+                    == .notDetermined{
                     UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]){
                         granted , err in
                         if let error = err{
                             print("error in permission", error)
                         }
                         self.generateNotification(randomInt)
-                        
+                    
                     }
-                case .authorized:
+                if notify.authorizationStatus == .authorized{
                     self.generateNotification(randomInt)
-                case .denied:
+                }
+                    else{
                     print("permission not given")
-                default:
-                    print("default")
+                    }
                 }
                 
             }
-            let alert = UIAlertController(title: "OTP", message: "Please provide your One Time Passcode", preferredStyle: .alert)
+            let alert = UIAlertController(title: "OTP", message: "Please enter the four digit code sent to your device.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: {[weak self] _ in
                 guard let field = alert.textFields?.first, let newText = field.text else{
                     return
@@ -110,7 +122,7 @@ class RegisterViewController: UIViewController {
                 if(enteredCode == randomInt){
                     self!.regButton.isEnabled = true
                 }else{
-                    let alert = UIAlertController(title: "Error", message: "Incorrect One Time Passcode", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Error", message: "Please Try Again", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Confirm", style: .default))
                     self!.present(alert, animated: true)
                 }
@@ -146,12 +158,13 @@ class RegisterViewController: UIViewController {
                        AppDelegate)?.persistentContainer.viewContext
         let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
         core.addReg(username: account.username as? NSString, email: account.email as? NSString)
-        account.username = username
-        account.email = email
-        print(account.username)
-        print(account.email)
-        print(username)
-        print(email)
+        
+            account.setValue(username, forKey: "username")
+            account.setValue(email, forKey: "email")
+        
+        print(account.username as Any)
+        print(account.email as Any)
+    
     }
     
     @IBOutlet weak var reEnterPassText: UITextField!

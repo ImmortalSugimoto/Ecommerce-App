@@ -33,6 +33,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             return false
         }
     }
+    
     func fetchIt(username : NSString, emails : NSString){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
@@ -40,7 +41,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
           var account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
         account.username = username as String
         account.email = emails as String
-        print("\(username)")
+        print(username)
     }
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -151,10 +152,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             passwordTextField.text != nil{
             
             loginButtonActive.isEnabled = true
-       
+            core.addReg(username: account.username as NSString?, email: account.email as NSString?)
+            account.username = userNameTextField.text
+           
         }
         else{
             loginButtonActive.isEnabled = false
+            
         }
     
     }
