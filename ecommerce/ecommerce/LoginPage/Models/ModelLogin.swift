@@ -37,6 +37,9 @@ public class coreDataInfo{
                        AppDelegate)?.persistentContainer.viewContext
           let request = Account.fetchRequest() as NSFetchRequest<Account>
           let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
+          account.shippingAddress = shippingAddress as String
+          account.billingAddress = billingAddress as String
+          account.paymentInfo = paymentInfo as String
         
     }
     public func fetchIt(username : NSString, email : NSString){
@@ -44,15 +47,16 @@ public class coreDataInfo{
                        AppDelegate)?.persistentContainer.viewContext
           let request = Account.fetchRequest() as NSFetchRequest<Account>
           let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
-       
+          account.username = username as String
+          account.email = email as String
       
     }
     
-    public func addAcc(shippingAddress : NSString, billingAddress : NSString, paymentInfo : NSString, email : NSString?){
+    public func addAcc(shippingAddress : NSString?, billingAddress : NSString?, paymentInfo : NSString?, email : NSString?){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
     let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as? Account
-                     
+             
         do{
             try context?.save()
             print("data saved")

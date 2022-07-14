@@ -66,7 +66,6 @@
 		AE0E6EB62871402B009E5BFC /* login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EAB2871402B009E5BFC /* login.storyboard */; };
 		AE0E6EB72871402B009E5BFC /* welcome-1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0E6EAC2871402B009E5BFC /* welcome-1.png */; };
 		AE0E6EB82871402B009E5BFC /* ModelLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */; };
-		AE0E6EBA2871402B009E5BFC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */; };
 		AE0E6EBC2871402B009E5BFC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */; };
 		AE0E6EC32871E466009E5BFC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AE0E6EC22871E466009E5BFC /* KeychainSwift */; };
 		AE31C56528729EB600C78C14 /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE31C56428729EB600C78C14 /* NavBar.swift */; };
@@ -144,7 +143,6 @@
 		AE0E6EAB2871402B009E5BFC /* login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = login.storyboard; sourceTree = "<group>"; };
 		AE0E6EAC2871402B009E5BFC /* welcome-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome-1.png"; sourceTree = "<group>"; };
 		AE0E6EAD2871402B009E5BFC /* ModelLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelLogin.swift; sourceTree = "<group>"; };
-		AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AE31C56428729EB600C78C14 /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		AE31C5662872A2E000C78C14 /* icon-arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-arrow-left.png"; sourceTree = "<group>"; };
@@ -532,7 +530,6 @@
 		AE784C3D287E7BA500672F3B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AE0E6EAF2871402B009E5BFC /* AccountViewController.swift */,
 				AE0E6EB12871402B009E5BFC /* RegisterViewController.swift */,
 				AE041A4E2874F546001FE208 /* ContactViewController.swift */,
 				AE041A4C2874F525001FE208 /* DetailsViewController.swift */,
@@ -684,7 +681,6 @@
 				61077972286E00800094F95A /* AddRemoveItem.swift in Sources */,
 				610779C1286F47FD0094F95A /* ChooseCategoryHelper.swift in Sources */,
 				AE041A4D2874F525001FE208 /* DetailsViewController.swift in Sources */,
-				AE0E6EBA2871402B009E5BFC /* AccountViewController.swift in Sources */,
 				610779A3286E8F3D0094F95A /* ProductModel.swift in Sources */,
 				61CE686F286FE1AB008CD0C1 /* ProductDB.swift in Sources */,
 				847F7F68286A4C30006E87AB /* ViewController.swift in Sources */,

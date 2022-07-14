@@ -9,7 +9,10 @@ import UIKit
 import KeychainSwift
 import CoreData
 class DetailsViewController: UIViewController, UITextFieldDelegate {
-
+    var email = ""
+    var shippingAddress = ""
+    var billingAddress = ""
+    var paymentInfo = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let topString = keychain.get("user") else {return}
@@ -29,7 +32,7 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func storage(_ sender: Any) {
     }
-    @IBOutlet weak var billingAddress: UITextField!
+    @IBOutlet weak var billingAd: UITextField!
     @IBOutlet weak var billingCity: UITextField!
     @IBOutlet weak var billingState: UITextField!
     @IBOutlet weak var billingZip: UITextField!
@@ -42,37 +45,57 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailText: UITextField!
     @IBAction func ccSave(_ sender: Any) {
-        core.addAcc(shippingAddress: account.shippingAddress as! NSString, billingAddress: account.billingAddress! as NSString, paymentInfo: account.paymentInfo! as NSString, email: account.email! as NSString)
-      
-        let email = emailText.text
-        account.email! = email!
+       
+        email = emailText.text!
+       
         
-        let shippingAddress = "\(shippingAd.text!), \(shippingCity.text!), \(shippingState.text!), \(shippingZip.text!)"
-            account.shippingAddress = shippingAddress
+        shippingAddress = "\(shippingAd.text!), \(shippingCity.text!), \(shippingState.text!), \(shippingZip.text!)"
+     
         
-        let billingAddress = "\(billingAddress.text!), \(billingCity.text!), \(billingState.text!), \(billingZip.text!)"
-            account.billingAddress = billingAddress
+        billingAddress = "\(billingAd.text!), \(billingCity.text!), \(billingState.text!), \(billingZip.text!)"
         
-        let paymentInfo = "\(ccNumber.text!), \(ccExp.text!), \(ccCVV.text!), \(ccZip.text!)"
-            account.paymentInfo = paymentInfo
+        paymentInfo = "\(ccNumber.text!), \(ccExp.text!), \(ccCVV.text!), \(ccZip.text!)"
+     
        /*account.setValue(billingAddress, forKey: "billingAddress")
         account.setValue(shippingAddress, forKey: "shippingAddress")
         account.setValue(paymentInfo, forKey: "paymentInfo")
         account.setValue(email, forKey: "email")*/
-
-            do{
-                try context?.save()
-                print(account.paymentInfo)
-                print(account.shippingAddress)
-                print(account.billingAddress)
-                print(account.paymentInfo)
-            }
-                catch{
-                    print("data not saved")
-                }
+        
+        print(email)
+        print(shippingAddress)
+        print(billingAddress)
+        print(paymentInfo)
+        core.addAcc(shippingAddress: shippingAddress as? NSString, billingAddress: billingAddress as? NSString, paymentInfo: paymentInfo as? NSString, email: email as? NSString)
+        print(email)
+        print(shippingAddress)
+        print(billingAddress)
+        print(paymentInfo)
+        
+        core.fetchAcc(shippingAddress: shippingAddress as NSString, billingAddress: billingAddress as NSString, paymentInfo: paymentInfo as NSString)
+        print(email)
+        print(account.username)
+        core.fetchIt(username: account.username as! NSString, email: email as! NSString)
     }
     @IBOutlet weak var titleBar: UINavigationBar!
     
+    @IBAction func continueButton(_ sender: Any) {
+      /* let stiew = AccountViewController()
+        
+        let storyboard = storyboard?.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
+        stiew.aUser = account.username!
+        
+        stiew.aEmail = email
+        account.setValue(email, forKey: "email")
+        stiew.aShip = shippingAddress
+        account.setValue(shippingAddress, forKey: "shippingAddress")
+        stiew.aBill = billingAddress
+        account.setValue(billingAddress, forKey: "billingAddress")
+        stiew.aPay = paymentInfo
+         account.setValue(paymentInfo, forKey: "paymentInfo")
+        
+        self.present(storyboard, animated: true)
+        */
+    }
     
      @IBOutlet weak var titleTop: UINavigationItem!
    
