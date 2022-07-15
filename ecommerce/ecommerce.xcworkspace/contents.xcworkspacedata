@@ -5,7 +5,13 @@
       location = "group:/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataProperties.swift">
    </FileRef>
    <FileRef
+      location = "absolute:/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataClass.swift">
+   </FileRef>
+   <FileRef
+      location = "absolute:/Users/xcode/Documents/Ecommerce-App/ecommerce/ecommerce/LoginPage/Models/Account+CoreDataClass.swift">
    </FileRef>
    <FileRef
       location = "group:ecommerce.xcodeproj">
