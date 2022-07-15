@@ -121,7 +121,7 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </state>
-                                                                <buttonConfiguration key="configuration" style="filled" title="FORGOT PASSWORD?" cornerStyle="small">
+                                                                <buttonConfiguration key="configuration" style="filled" title="LOGIN VERIFY" cornerStyle="small">
                                                                     <backgroundConfiguration key="background" strokeWidth="1" strokeOutset="0.0">
                                                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                                                         <color key="strokeColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
