@@ -6,5 +6,5 @@ target 'ecommerce' do
   use_frameworks!
 
   # Pods for ecommerce
-pod 'KeychainAccess'
+pod 'KeychainSwift'
 end

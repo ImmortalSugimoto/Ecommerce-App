@@ -16,6 +16,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var passwordTextField: UITextField!
     //textfield error logic
    
+    @IBAction func loginVerify(_ sender: Any) {
+        loginButtonActive.isEnabled = true
+       
+    }
     @IBAction func accountButton(_ sender: Any) {
     }
     
@@ -34,13 +38,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
-    func fetchIt(username : NSString, emails : NSString){
+    func fetchIt(username : NSString, emails : NSString, phontText : NSString){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
           let request = Account.fetchRequest() as NSFetchRequest<Account>
           var account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
         account.username = username as String
         account.email = emails as String
+        account.phoneNumber = phontText as String
         print(username)
     }
     override func viewDidLoad() {
@@ -51,8 +56,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     super.viewDidLoad()
     guard let topString = keychain.get("user") else {return}
     navigationItem.prompt = NSLocalizedString(topString, comment: "")
-     
-       
+   
+        loginButtonActive.isEnabled = false
         
     RememberSwitch()
        
@@ -65,22 +70,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context) as! Account
         rememberMeYa.isOn = false
         if (rememberMeYa.isOn == true) {
-            userNameTextField.text = account.username
-            passwordTextField.text = keychain.get("password")
-            do{
+                  account.username = account.phoneNumber
+                print(account.username)
+                }
+        else{
+                    account.username = account.email
+                    print(account.email)
+                    }
             
-            try? self.context.save()
-            }
-            catch{
-                rememberMeYa.isOn = false
-                print("error")
+    }
                 
-            }
-        }
+            
+        
        
       
         
-             }
+             
     
         @objc func handleTap(sender: UITapGestureRecognizer) {
            
@@ -135,9 +140,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             break
         }
     }
-    func loginCheck(){
-        
-    }
+    
     
     @IBOutlet weak var loginButtonActive: UIButton!
     
@@ -152,19 +155,32 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
             passwordTextField.text != nil{
             
             loginButtonActive.isEnabled = true
-            core.addReg(username: account.username as NSString?, email: account.email as NSString?)
-            account.username = userNameTextField.text
+          
+         
            
         }
-        else{
-            loginButtonActive.isEnabled = false
-            
-        }
-    
+    }
+    /*
+    @IBAction func loginVerify(_ sender: Any) {
+        if userNameTextField.text == ""{
+                loginButtonActive.isEnabled = true
+            }
+            else{
+                loginButtonActive.isEnabled = false
+            }
+
+            if userNameTextField.text == ""{
+                loginButtonActive.isEnabled = true
+            }
+            else{
+                loginButtonActive.isEnabled = false
+        
+    }
     }
     @IBAction func settingsPhone(_ sender: Any) {
         if let url = URL.init(string: UIApplication.openSettingsURLString) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+}*/
 }

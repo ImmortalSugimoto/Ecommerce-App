@@ -23,6 +23,7 @@ class RegisterViewController: UIViewController, UNUserNotificationCenterDelegate
         UNUserNotificationCenter.current().delegate = self
         userTextfield.delegate = self
         emails.delegate = self
+        phontText.delegate = self
     }
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.banner])
@@ -44,8 +45,8 @@ class RegisterViewController: UIViewController, UNUserNotificationCenterDelegate
     @IBOutlet weak var passwordMatch2: UILabel!
     @IBOutlet weak var passwordMatchSuccess: UILabel!
     @IBOutlet weak var regButton: UIButton!
+    @IBOutlet weak var phoneNumber: UITextField!
     
-   
     @IBAction func otp(_ sender: Any) {
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
@@ -65,10 +66,13 @@ class RegisterViewController: UIViewController, UNUserNotificationCenterDelegate
             userTaken.isHidden = true
             
         }
-        core.addReg(username: account.username as? NSString, email: account.email as? NSString)
+        core.addReg(username: userTextfield.text as? NSString, email: emails.text as? NSString, phoneNumber : phontText.text as? NSString)
         account.setValue(emails.text, forKey: "email") 
         account.setValue(userTextfield.text, forKey: "username")
-     
+        account.setValue(phontText.text, forKey: "phoneNumber")
+        print(account.email)
+        print(account.phoneNumber)
+        print (account.username)
        
         
         if password == passwordCheck {
@@ -82,6 +86,10 @@ class RegisterViewController: UIViewController, UNUserNotificationCenterDelegate
             passwordMatch1.isHidden = false
             passwordMatchSuccess.isHidden = true
         }
+        
+        
+        
+        
         if(emails.text?.range(of: #".+\@.+\..+"#, options: .regularExpression) != nil){
            invalidEmail.isHidden = true
         }else{
@@ -91,6 +99,10 @@ class RegisterViewController: UIViewController, UNUserNotificationCenterDelegate
            passwordMatchSuccess.isHidden == false &&
            availableUser.isHidden == false){
             //random 4 digit number to send as OTP
+    
+            
+            
+            
             let randomInt = Int.random(in: 1000..<9999)
             UNUserNotificationCenter.current().getNotificationSettings{ notify in
                 if notify.authorizationStatus
@@ -151,19 +163,21 @@ class RegisterViewController: UIViewController, UNUserNotificationCenterDelegate
         let request = UNNotificationRequest(identifier: "User_App_Notification", content: content, trigger: timeInterval)
         UNUserNotificationCenter.current().add(request)
     }
+    
     @IBAction func registerButton(_ sender: Any) {
         let username = userTextfield.text
         let email = emails.text
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
         let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
-        core.addReg(username: account.username as? NSString, email: account.email as? NSString)
+        core.addReg(username: userTextfield.text! as NSString, email: emails.text! as NSString, phoneNumber : phontText.text! as NSString)
         
             account.setValue(username, forKey: "username")
             account.setValue(email, forKey: "email")
-        
+        account.setValue(phoneNumber, forKey: "phoneNumber")
         print(account.username as Any)
         print(account.email as Any)
+        print(account.phoneNumber as Any)
     
     }
     

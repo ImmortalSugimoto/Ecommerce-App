@@ -74,7 +74,7 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
         core.fetchAcc(shippingAddress: shippingAddress as NSString, billingAddress: billingAddress as NSString, paymentInfo: paymentInfo as NSString)
         print(email)
         print(account.username)
-        core.fetchIt(username: account.username as! NSString, email: email as! NSString)
+        core.fetchIt(username: account.username as! NSString, email: email as! NSString, phoneNumber : account.phoneNumber as! NSString)
     }
     @IBOutlet weak var titleBar: UINavigationBar!
     

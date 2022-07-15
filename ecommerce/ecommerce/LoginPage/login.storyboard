@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" image="shared/shopittitle" translatesAutoresizingMaskIntoConstraints="NO" id="5aV-ke-hiq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" image="appicon" translatesAutoresizingMaskIntoConstraints="NO" id="5aV-ke-hiq">
                                 <rect key="frame" x="5" y="0.0" width="404" height="51.5"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="0.17358896307354607" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -131,8 +131,8 @@
                                                                     <color key="baseBackgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="0.47367374846582327" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 </buttonConfiguration>
                                                                 <connections>
-                                                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yrr-Ts-EDa"/>
-                                                                    <segue destination="NSE-qk-Eky" kind="show" id="lar-Xe-ghC"/>
+                                                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqt-dw-Opw"/>
+                                                                    <action selector="loginVerify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFp-ia-3jb"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkJ-Lg-cp4">
@@ -1296,22 +1296,22 @@
                                         <rect key="frame" x="0.0" y="443" width="374" height="100"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-6" translatesAutoresizingMaskIntoConstraints="NO" id="wnr-pn-GVd">
-                                                <rect key="frame" x="0.0" y="0.0" width="114" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="109.5" height="100"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="33% off!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76M-tV-1bd">
-                                                        <rect key="frame" x="0.0" y="0.0" width="114" height="37.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="109.5" height="37.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="19"/>
                                                         <color key="textColor" systemColor="systemRedColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-zx9-speaker/image-gallery-3" translatesAutoresizingMaskIntoConstraints="NO" id="sCC-J8-fkp">
-                                                        <rect key="frame" x="0.0" y="31.5" width="114" height="60"/>
+                                                        <rect key="frame" x="0.0" y="31.5" width="109.5" height="60"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="ynp-gI-HWx"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speakers on sale!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zei-Pe-pX4">
-                                                        <rect key="frame" x="0.0" y="85.5" width="114" height="14.5"/>
+                                                        <rect key="frame" x="0.0" y="85.5" width="109.5" height="14.5"/>
                                                         <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1319,10 +1319,10 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-zx7-speaker/image-category-page-preview" translatesAutoresizingMaskIntoConstraints="NO" id="59o-Vv-kQ8">
-                                                <rect key="frame" x="105" y="0.0" width="198.5" height="100"/>
+                                                <rect key="frame" x="100.5" y="0.0" width="190.5" height="100"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-zx9-speaker/image-gallery-1" translatesAutoresizingMaskIntoConstraints="NO" id="VdQ-6S-ZJb">
-                                                <rect key="frame" x="294.5" y="0.0" width="79.5" height="100"/>
+                                                <rect key="frame" x="282" y="0.0" width="92" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="k2N-ey-O4u"/>
                                                 </constraints>
@@ -1420,7 +1420,7 @@
             <objects>
                 <viewController id="NSE-qk-Eky" customClass="ForgotPassViewController" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lb4-oX-2Ik">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FORGOT PASSWORD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="glI-Ih-i2n">
@@ -1467,11 +1467,12 @@
         <segue reference="RLM-98-lc1"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="appicon" width="128" height="128"/>
         <image name="icon-arrow-left.png" width="7.9200000762939453" height="12"/>
-        <image name="product-xx59-headphones/image-gallery-1" width="554" height="348"/>
+        <image name="product-xx59-headphones/image-gallery-1" width="654" height="348"/>
         <image name="product-xx59-headphones/image-gallery-3" width="635" height="592"/>
         <image name="product-zx7-speaker/image-category-page-preview" width="1378" height="704"/>
-        <image name="product-zx9-speaker/image-gallery-1" width="445" height="280"/>
+        <image name="product-zx9-speaker/image-gallery-1" width="554" height="348"/>
         <image name="product-zx9-speaker/image-gallery-3" width="790" height="736"/>
         <image name="shared/shopittitle" width="445" height="204"/>
         <namedColor name="Button">

@@ -42,13 +42,14 @@ public class coreDataInfo{
           account.paymentInfo = paymentInfo as String
         
     }
-    public func fetchIt(username : NSString, email : NSString){
+    public func fetchIt(username : NSString, email : NSString, phoneNumber : NSString){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
           let request = Account.fetchRequest() as NSFetchRequest<Account>
           let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
           account.username = username as String
           account.email = email as String
+        account.phoneNumber = phoneNumber as String
       
     }
     
@@ -66,14 +67,16 @@ public class coreDataInfo{
             }
         }
     
-   public func addReg(username : NSString!, email : NSString!){
+    public func addReg(username : NSString!, email : NSString!, phoneNumber : NSString!){
         let context = (UIApplication.shared.delegate as?
                        AppDelegate)?.persistentContainer.viewContext
-    let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as? Account
+    let account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
       
     do{
         try context?.save()
         print("data saved")
+        print(account.username)
+        print(account.email)
     }
         catch{
             print("data not saved")
@@ -83,7 +86,7 @@ public class coreDataInfo{
 let context = (UIApplication.shared.delegate as?
                AppDelegate)?.persistentContainer.viewContext
 var account = NSEntityDescription.insertNewObject(forEntityName: "Account", into: context!) as! Account
-var accountList = [account.username, account.email , account.shippingAddress, account.billingAddress, account.paymentInfo]
+
 
     /*var storyboardViews = [LoginViewController, RegisterViewController, DetailsViewController, LanguageViewController, ContactViewController, DetailsViewController, AccountViewController]
     */
