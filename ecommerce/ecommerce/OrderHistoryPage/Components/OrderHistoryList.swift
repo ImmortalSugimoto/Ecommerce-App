@@ -11,14 +11,25 @@ struct OrderHistoryList: View {
     @EnvironmentObject var cartManager: CartManager
     @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
-    
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
+
     @State var ordersData = [Order]()
     @State var showNextView = false
     @State var current = ""
     
     var body: some View {
         Group {
-            NavigationLink(destination: OrderSVC(orderId: current).environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
+            NavigationLink(destination:
+                            OrderSVC(orderId: current)
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
+                           , isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView {

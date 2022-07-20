@@ -9,7 +9,11 @@ import SwiftUI
 
 struct OrderSVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     var orderId: String?
     
@@ -17,7 +21,11 @@ struct OrderSVC: View {
         VStack(alignment: .leading) {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(historyManager)
                 .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             NavigationBack()
             SignupModal()
             ScrollView {
@@ -32,6 +40,13 @@ struct OrderSVC: View {
                 .font(.subheadline)
             OrderRefund(orderId: orderId!)
                 .environmentObject(ordersManager)
+            AltTabController()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
         }
         .navigationTitle("")
         .navigationBarHidden(true)

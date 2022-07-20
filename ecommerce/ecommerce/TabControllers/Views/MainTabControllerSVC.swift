@@ -73,6 +73,8 @@ struct MainTabControllerSVC: View {
                     .environmentObject(cartManager)
                     .environmentObject(historyManager)
                     .environmentObject(ordersManager)
+                    .environmentObject(commentsManager)
+                    .environmentObject(wishlistManager)
                     .environmentObject(services)
                     .tabItem {
                         Image(systemName: "list.bullet.rectangle.fill")
