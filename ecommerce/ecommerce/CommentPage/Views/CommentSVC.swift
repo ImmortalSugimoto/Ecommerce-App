@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct CommentSVC: View {
-    @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     @State var titleText: String = ""
@@ -21,10 +24,14 @@ struct CommentSVC: View {
     
     var body: some View {
         VStack {
-            NavigationBack()
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(historyManager)
                 .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
+            NavigationBack()
             VStack(alignment: .leading) {
                 Text("Title")
                 TextField("Enter title here", text: $titleText)
@@ -53,6 +60,13 @@ struct CommentSVC: View {
             .padding()
             .navigationTitle("")
             .navigationBarHidden(true)
+            AltTabController()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
         }
         .alert(isPresented: $showAlert) {
             Alert(title: Text("Notification"), message: Text("Please fill in all fields before continuing"), dismissButton: .default(Text("Dismiss")))

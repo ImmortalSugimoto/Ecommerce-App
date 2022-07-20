@@ -9,7 +9,11 @@ import SwiftUI
 
 struct ShoppingCartSVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     @State var showAlert = false
@@ -18,10 +22,22 @@ struct ShoppingCartSVC: View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(historyManager)
                 .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             NavigationBack()
             SignupModal()
-            NavigationLink(destination: CheckoutSVC().environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
+            NavigationLink(destination:
+                            CheckoutSVC()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
+                           , isActive: $showNextView) {
                 EmptyView()
             }
             HStack {
@@ -89,6 +105,13 @@ struct ShoppingCartSVC: View {
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Notification"), message: Text("Please log in to proceed to checkout"), dismissButton: .default(Text("Dismiss")))
             }
+            AltTabController()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
         }
     }
 }

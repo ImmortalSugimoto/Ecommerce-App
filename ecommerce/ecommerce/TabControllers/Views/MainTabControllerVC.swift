@@ -16,7 +16,7 @@ class MainTabControllerVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        let childView = UIHostingController(rootView: MainTabControllerSVC())
+        let childView = UIHostingController(rootView: MainTabControllerSVC(idx: 0))
         addChild(childView)
         childView.view.frame = container.bounds
         container.addSubview(childView.view)

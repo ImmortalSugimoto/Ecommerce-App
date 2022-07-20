@@ -9,7 +9,11 @@ import SwiftUI
 
 struct CheckoutSummary: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     @State var showAlert = false
@@ -19,14 +23,22 @@ struct CheckoutSummary: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("SUMMARY")
-            NavigationLink(destination: ThankYouSVC().environmentObject(cartManager).onAppear{
-                let newOrder = OrdersViewModel.createNewOrder()
-                ordersManager.addToHistory(order: newOrder)
-                CDOrdersHelper.cdOrdersHelper.addOrder(orderObj: newOrder)
-                CheckoutViewModel.storeOrderItems(orderId: newOrder.orderId, cart: cartManager.items)
-            }, isActive: $showNextView) {
-                EmptyView()
-            }
+            NavigationLink(destination:
+                            ThankYouSVC()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
+                .onAppear{
+                    let newOrder = OrdersViewModel.createNewOrder()
+                    ordersManager.addToHistory(order: newOrder)
+                    CDOrdersHelper.cdOrdersHelper.addOrder(orderObj: newOrder)
+                    CheckoutViewModel.storeOrderItems(orderId: newOrder.orderId, cart: cartManager.items)
+                }, isActive: $showNextView) {
+                    EmptyView()
+                }
             ScrollView {
                 ForEach(cartManager.items, id: \.item.id) { it in
                     HStack {

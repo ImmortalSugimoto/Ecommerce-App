@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ProductComments: View {
-    @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     
@@ -18,8 +21,16 @@ struct ProductComments: View {
     
     var body: some View {
         VStack {
-            NavigationLink(destination: CommentsPageSVC(product: product).environmentObject(commentsManager).environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
-               EmptyView()
+            NavigationLink(destination:
+                            CommentsPageSVC(product: product)
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
+                           , isActive: $showNextView) {
+                EmptyView()
             }
             Button {
                 showNextView = true

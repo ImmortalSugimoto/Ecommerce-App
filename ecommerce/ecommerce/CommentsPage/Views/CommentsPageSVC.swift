@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct CommentsPageSVC: View {
-    @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     @State var showAlert = false
@@ -22,10 +25,22 @@ struct CommentsPageSVC: View {
         VStack(alignment: .leading) {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(historyManager)
                 .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             NavigationBack()
             SignupModal()
-            NavigationLink(destination: CommentSVC(product: product).environmentObject(commentsManager).environmentObject(cartManager).environmentObject(ordersManager), isActive: $showNextView) {
+            NavigationLink(destination:
+                            CommentSVC(product: product)
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
+                           , isActive: $showNextView) {
                 EmptyView()
             }
             VStack {
@@ -59,6 +74,13 @@ struct CommentsPageSVC: View {
             .padding(.horizontal, 15)
             .padding([.top], 15)
             Spacer()
+            AltTabController()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
         }
         .onAppear(perform: {
             commentsManager.loadComments(commentsData: CDCommentHelper.cdCommentHelper.getComments(productID: product!.id))

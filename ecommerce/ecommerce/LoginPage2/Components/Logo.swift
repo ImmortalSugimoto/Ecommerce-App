@@ -2,17 +2,14 @@
 //  Logo.swift
 //  ecommerce
 //
-//  Created by Vincent Salinas on 7/19/22.
+//  Created by Vincent Salinas on 7/20/22.
 //
 
 import SwiftUI
 
 struct Logo: View {
     var body: some View {
-        Image("appstore")
-            .resizable()
-            .frame(width: 200, height: 200)
-            .aspectRatio(contentMode: .fill)
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 

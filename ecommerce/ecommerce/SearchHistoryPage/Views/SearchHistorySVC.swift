@@ -16,13 +16,17 @@ struct SearchHistorySVC: View {
     @EnvironmentObject var services: Services
     
     @State var showNextView = false
-    @State var current: NewProduct = HomePageViewModel.placeHolderProduct()
+    @State var current = HomePageViewModel.placeHolderProduct()
     
     var body: some View {
         VStack(alignment: .leading) {
             NavigationBar()
                 .environmentObject(cartManager)
-                .environmentObject(OrdersManager())
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             SignupModal()
             Text("Recent Searches")
                 .font(.title2)

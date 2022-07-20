@@ -9,7 +9,11 @@ import SwiftUI
 
 struct AccountPageSVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
     @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     @State var showNextView = false
     @State var loggedIn = userDefaults.bool(forKey: "isLoggedIn")
@@ -18,10 +22,14 @@ struct AccountPageSVC: View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(historyManager)
                 .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             NavigationBack()
             Spacer()
-            NavigationLink(destination: MainTabControllerSVC().navigationTitle("").navigationBarHidden(true), isActive: $showNextView) {
+            NavigationLink(destination: MainTabControllerSVC(idx: 0).navigationTitle("").navigationBarHidden(true), isActive: $showNextView) {
                 EmptyView()
             }
             VStack {
@@ -41,7 +49,13 @@ struct AccountPageSVC: View {
                 
             }
             .padding()
-            
+            AltTabController()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
         }
     }
 }

@@ -18,7 +18,7 @@ struct LoginAction: View {
             HStack {
                 Spacer()
             }
-            NavigationLink(destination: MainTabControllerSVC().navigationTitle("").navigationBarHidden(true), isActive: $showNextView) {
+            NavigationLink(destination: MainTabControllerSVC(idx: 0).navigationTitle("").navigationBarHidden(true), isActive: $showNextView) {
                 EmptyView()
             }
             VStack(spacing: 10) {

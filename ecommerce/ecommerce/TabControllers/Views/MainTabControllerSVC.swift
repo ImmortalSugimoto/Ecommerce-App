@@ -17,9 +17,11 @@ struct MainTabControllerSVC: View {
     @StateObject var services = Services()
     
     @State private var selection = 0
+    var idx: Int
     
-    init() {
+    init(idx: Int) {
         UITabBar.appearance().backgroundColor = UIColor.systemGray6
+        self.idx = idx
         if (!userDefaults.bool(forKey: "isLoggedIn")) {
             LoginPageViewModel.resetUserDefaults()
         }
@@ -94,6 +96,9 @@ struct MainTabControllerSVC: View {
             } //TabView
         }
         .navigationViewStyle(.stack)
+        .onAppear() {
+            selection = idx
+        }
     }
 }
 

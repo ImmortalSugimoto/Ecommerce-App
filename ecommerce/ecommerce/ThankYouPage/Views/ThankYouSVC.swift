@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ThankYouSVC: View {
     @EnvironmentObject var cartManager: CartManager
+    @EnvironmentObject var historyManager: HistoryManager
+    @EnvironmentObject var ordersManager: OrdersManager
+    @EnvironmentObject var commentsManager: CommentsManager
+    @EnvironmentObject var wishlistManager: WishlistManager
+    @EnvironmentObject var services: Services
     
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {

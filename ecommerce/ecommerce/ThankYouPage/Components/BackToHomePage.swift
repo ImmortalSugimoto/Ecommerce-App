@@ -11,7 +11,7 @@ struct BackToHomePage: View {
     @EnvironmentObject var cartManager: CartManager
     
     var body: some View {
-        NavigationLink(destination: MainTabControllerSVC().navigationTitle("").navigationBarHidden(true)) {
+        NavigationLink(destination: MainTabControllerSVC(idx: 0).navigationTitle("").navigationBarHidden(true)) {
             Section {
                 Text("BACK TO HOME")
                     .padding()

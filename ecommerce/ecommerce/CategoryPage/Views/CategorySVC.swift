@@ -23,7 +23,11 @@ struct CategorySVC: View {
         VStack {
             NavigationBar()
                 .environmentObject(cartManager)
+                .environmentObject(historyManager)
                 .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
             NavigationBack()
             ScrollView {
                 if (!loggedIn) {
@@ -47,6 +51,13 @@ struct CategorySVC: View {
                         .environmentObject(services)
                 }
             }
+            AltTabController()
+                .environmentObject(cartManager)
+                .environmentObject(historyManager)
+                .environmentObject(ordersManager)
+                .environmentObject(commentsManager)
+                .environmentObject(wishlistManager)
+                .environmentObject(services)
         }
         .navigationTitle("")
         .navigationBarHidden(true)
