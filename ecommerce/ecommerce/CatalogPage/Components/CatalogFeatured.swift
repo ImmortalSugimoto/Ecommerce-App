@@ -25,7 +25,7 @@ struct CatalogFeatured: View {
                 .bold()
             Text("Check out all the new highly recommended swag")
                 .font(.title3)
-            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager), isActive: $showNextView) {
+            NavigationLink(destination: ProductSVC(product: current).environmentObject(cartManager).environmentObject(historyManager).environmentObject(ordersManager).environmentObject(commentsManager).environmentObject(wishlistManager).environmentObject(services), isActive: $showNextView) {
                 EmptyView()
             }
             ScrollView(.horizontal) {
