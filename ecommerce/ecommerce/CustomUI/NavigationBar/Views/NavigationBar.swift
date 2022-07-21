@@ -14,7 +14,7 @@ struct NavigationBar: View {
     @EnvironmentObject var commentsManager: CommentsManager
     @EnvironmentObject var wishlistManager: WishlistManager
     @EnvironmentObject var services: Services
-
+    
     var body: some View {
         HStack {
             NavigationLink(destination:
@@ -44,8 +44,13 @@ struct NavigationBar: View {
                 .environmentObject(wishlistManager)
                 .environmentObject(services))
             {
-                Image(systemName: "cart")
-                    .foregroundColor(Color.white)
+                ZStack {
+                    Image(systemName: "cart")
+                        .foregroundColor(Color.white)
+                    Badge()
+                        .environmentObject(cartManager)
+                        .offset(x: 10, y: -10)
+                }
             }
         }
         .padding([.leading, .trailing], 27)

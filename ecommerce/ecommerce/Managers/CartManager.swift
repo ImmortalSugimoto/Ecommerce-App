@@ -35,6 +35,10 @@ class CartManager: ObservableObject {
         return result
     }
     
+    func clearCart() {
+        items = []
+    }
+    
 }
 
 enum AddedCosts: Int {

@@ -103,6 +103,7 @@
 		6163585F2880D958001D78BF /* OrderRefund.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6163585E2880D958001D78BF /* OrderRefund.swift */; };
 		616358612880FC0D001D78BF /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616358602880FC0D001D78BF /* OrderViewModel.swift */; };
 		61A6BB5D2888604800D7CAC0 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6BB5C2888604800D7CAC0 /* Logo.swift */; };
+		61A6BB6028890C0500D7CAC0 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A6BB5F28890C0500D7CAC0 /* Badge.swift */; };
 		61B7C107287BC6650064B8DF /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B7C106287BC6650064B8DF /* CommentView.swift */; };
 		61B7C109287BC6780064B8DF /* comment Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61B7C108287BC6780064B8DF /* comment Call.swift */; };
 		61CE686B286FE189008CD0C1 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CE686A286FE189008CD0C1 /* HomePage.swift */; };
@@ -314,6 +315,7 @@
 		6163585E2880D958001D78BF /* OrderRefund.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRefund.swift; sourceTree = "<group>"; };
 		616358602880FC0D001D78BF /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		61A6BB5C2888604800D7CAC0 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+		61A6BB5F28890C0500D7CAC0 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		61B7C106287BC6650064B8DF /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		61B7C108287BC6780064B8DF /* comment Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "comment Call.swift"; sourceTree = "<group>"; };
 		61CE686A286FE189008CD0C1 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 			children = (
 				61077974286E055F0094F95A /* NavigationBar.swift */,
 				61E2ACC7287274D600CD4F8F /* NavigationBar2.swift */,
+				61A6BB5F28890C0500D7CAC0 /* Badge.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1051,6 +1054,18 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		61A6BB5E2889082B00D7CAC0 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				61CE688228710113008CD0C1 /* CartManager.swift */,
+				61E2AD1928772D6B00CD4F8F /* HistoryManager.swift */,
+				61E2AD662878809900CD4F8F /* OrdersManager.swift */,
+				6133A31B287DBA0200CE728F /* CommentsManager.swift */,
+				616358562880786D001D78BF /* WishlistManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		61B7C105287BC6490064B8DF /* CommentView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1076,14 +1091,9 @@
 			isa = PBXGroup;
 			children = (
 				6133A303287D08F900CE728F /* CommentModel.swift */,
-				61CE688228710113008CD0C1 /* CartManager.swift */,
 				610779D2286F9D760094F95A /* NewProduct.swift */,
 				61CE687D2870FF67008CD0C1 /* CartItem.swift */,
-				61E2AD1928772D6B00CD4F8F /* HistoryManager.swift */,
-				61E2AD662878809900CD4F8F /* OrdersManager.swift */,
-				6133A31B287DBA0200CE728F /* CommentsManager.swift */,
 				61635853288073A6001D78BF /* WishlistItemModel.swift */,
-				616358562880786D001D78BF /* WishlistManager.swift */,
 				613152E328825F68007F3C89 /* UserModel.swift */,
 			);
 			path = Models;
@@ -1649,6 +1659,7 @@
 				61E2ACCF2872968E00CD4F8F /* ThankYouPage */,
 				61E2ACB52872071C00CD4F8F /* CategoryPage */,
 				61E2ACA42871568700CD4F8F /* LoginPage */,
+				61A6BB5E2889082B00D7CAC0 /* Managers */,
 				61CE687C2870FDF7008CD0C1 /* Models */,
 				61E2AC9E28713E9C00CD4F8F /* TabControllers */,
 				61CE6884287110C1008CD0C1 /* Catalog */,
@@ -1943,6 +1954,7 @@
 				6163585028807251001D78BF /* PNPWishlistItem+CoreDataProperties.swift in Sources */,
 				6107798A286E49580094F95A /* CheckoutDetail.swift in Sources */,
 				61E2AD9B287929CC00CD4F8F /* OrderItemSVC.swift in Sources */,
+				61A6BB6028890C0500D7CAC0 /* Badge.swift in Sources */,
 				613152EB288261C8007F3C89 /* SignupHelpers.swift in Sources */,
 				6107799D286E8DF40094F95A /* ProductContents.swift in Sources */,
 				610779A5286E95090094F95A /* ProductQuantity.swift in Sources */,

@@ -43,7 +43,10 @@ struct ShoppingCartSVC: View {
             HStack {
                 Text("CART (\(cartManager.items.count))")
                 Spacer()
-                Button("Remove All") {
+                Button(action: {
+                    cartManager.clearCart()
+                }) {
+                    Text("Remove All")
                 }
             }
             .padding([.leading, .trailing], 27)

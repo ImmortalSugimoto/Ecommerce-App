@@ -13,7 +13,7 @@ struct QuantityHelper: View {
     var body: some View {
         HStack {
             Button {
-                quantity -= 1
+                quantity = (quantity - 1) >= 0 ? (quantity - 1) : 0
             } label: {
                 Image(systemName: "minus")
             }
