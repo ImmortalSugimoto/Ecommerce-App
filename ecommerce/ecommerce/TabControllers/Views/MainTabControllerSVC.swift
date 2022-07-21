@@ -64,7 +64,7 @@ struct MainTabControllerSVC: View {
                     .environmentObject(wishlistManager)
                     .environmentObject(services)
                     .tabItem {
-                        Image(systemName: "person")
+                        Image(systemName: "book.fill")
                         Text("History")
                     }
                     .tag(2)

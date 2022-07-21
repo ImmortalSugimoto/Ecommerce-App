@@ -44,7 +44,7 @@ struct WishListItem: View {
                 wishlistManager.remoteFromWishlist(id: id)
                 CDWishlistHelper.cdWishlistHelper.removeFromWishlist(wishlistItemID: id)
             }) {
-                Image(systemName: "heart.fill")
+                Image(systemName: "heart.slash.fill")
                     .resizable()
                     .foregroundColor(Color.orange)
                     .frame(width: 20, height: 20)

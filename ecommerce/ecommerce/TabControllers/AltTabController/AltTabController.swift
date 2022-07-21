@@ -80,7 +80,7 @@ struct AltTabController: View {
                 Spacer()
                 AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "magnifyingglass", tabName: "Catalog", tabNum: 1)
                 Spacer()
-                AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "person.fill", tabName: "History", tabNum: 2)
+                AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "book.fill", tabName: "History", tabNum: 2)
                 Spacer()
                 AltTabControllerTab(showHome: $showHome, showCatalog: $showCatalog, showHistory: $showHistory, showOrders: $showOrders, showWishlist: $showWishlist, selector: $selector, systemIMG: "list.bullet.rectangle.fill", tabName: "Orders", tabNum: 3)
                 Spacer()

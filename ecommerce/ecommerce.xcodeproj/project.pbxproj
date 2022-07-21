@@ -663,7 +663,6 @@
 		610779B2286F3A510094F95A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				61570ECF28873BA200A2F514 /* AltTabController */,
 				6133A2E7287C6C9600CE728F /* FooterHelper */,
 				61E2AD162876868B00CD4F8F /* SignupModal */,
 				610779C4286F51B90094F95A /* About */,
@@ -1139,6 +1138,7 @@
 		61E2AC9E28713E9C00CD4F8F /* TabControllers */ = {
 			isa = PBXGroup;
 			children = (
+				61570ECF28873BA200A2F514 /* AltTabController */,
 				61E2AC9F28713EA200CD4F8F /* Views */,
 			);
 			path = TabControllers;
